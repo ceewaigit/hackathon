@@ -17,11 +17,11 @@ export default function Home() {
       <Header />
       <BentoGrid />
       <Prizes />
-      <Participants />
       <FAQ />
       <HackathonTimeline />
       <Sponsors />
       <Judges />
+      <Participants />
       <Footer />
     </div>
   );

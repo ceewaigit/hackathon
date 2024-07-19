@@ -102,7 +102,7 @@ const Sponsors = () => {
             boxShadow: '0 0 20px rgba(229, 228, 226, 0.5)',
         },
         'Gold sponsors': {
-            width: 'calc(25%)',
+            width: 'calc(22.5%)',
             minWidth: '200px',
             maxWidth: '300px',
             backgroundColor: 'rgba(255, 215, 0, 0.1)',

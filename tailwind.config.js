@@ -1,12 +1,14 @@
-import type { Config } from "tailwindcss"
-
-const config = {
+/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
+module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   prefix: "",
   theme: {
@@ -52,6 +54,25 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        info: {
+          DEFAULT: "hsl(var(--info))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+        },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+        },
+        boxShadow: {
+          sm: 'var(--tw-shadow-sm)',
+          DEFAULT: 'var(--tw-shadow)',
+          md: 'var(--tw-shadow-md)',
+          lg: 'var(--tw-shadow-lg)',
+          xl: 'var(--tw-shadow-xl)',
+          '2xl': 'var(--tw-shadow-2xl)',
+          inner: 'var(--tw-shadow-inner)',
+          none: 'var(--tw-shadow-none)',
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -70,7 +91,7 @@ const config = {
         'infinite-scroll': {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(-100%)' },
-        },
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -79,7 +100,4 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config
-
-export default config
+}

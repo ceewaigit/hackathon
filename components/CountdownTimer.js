@@ -45,7 +45,7 @@ const CountdownTimer = () => {
     return (
         <section className="container mx-auto max-w-screen-xl px-4 sm:px-6 md:px-8 lg:px-12">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tighter text-center text-foreground">
-                Time until the <span className="text-accent underline">hackython</span>.
+                The <span className="text-accent underline">datathon</span> timer.
             </h1>
             <div className="rounded-[20px] flex flex-col items-center py-8 px-3 shadow-card mt-5 bg-card">
                 <div className="flex flex-wrap justify-center text-foreground text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold tracking-tighter p-3 gap-3">
@@ -57,7 +57,7 @@ const CountdownTimer = () => {
                 <h2 className="text-foreground font-bold text-xl sm:text-2xl md:text-3xl tracking-tight text-center mt-6 md:mt-8 lg:mt-12">
                     Till the hacking ends.
                 </h2>
-                <p className="mt-2 text-muted-foreground text-center text-sm sm:text-base"> Let's get hacking! </p>
+                <p className="mt-2 text-muted-foreground text-center text-sm sm:text-base"> Please make sure to submit your projects before the deadline. </p>
             </div>
         </section>
     );

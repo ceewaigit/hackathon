@@ -2,14 +2,14 @@ import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 
 const judges = [
-    { name: 'John Doe', photo: '/person.jpg' },
-    { name: 'Jane Smith', photo: '/person.jpg' },
-    { name: 'David Johnson', photo: '/person.jpg' },
-    { name: 'Emily Brown', photo: '/person.jpg' },
-    { name: 'Michael Wilson', photo: '/person.jpg' },
-    { name: 'Sarah Davis', photo: '/person.jpg' },
-    { name: 'Robert Martinez', photo: '/person.jpg' },
-    { name: 'Jennifer Thompson', photo: '/person.jpg' },
+    { name: 'John Doe', photo: '/person.jpg', company: 'ABC Company' },
+    { name: 'Jane Smith', photo: '/person.jpg', company: 'XYZ Company' },
+    { name: 'David Johnson', photo: '/person.jpg', company: 'DEF Company' },
+    { name: 'Emily Brown', photo: '/person.jpg', company: 'GHI Company' },
+    { name: 'Michael Wilson', photo: '/person.jpg', company: 'JKL Company' },
+    { name: 'Sarah Davis', photo: '/person.jpg', company: 'MNO Company' },
+    { name: 'Robert Martinez', photo: '/person.jpg', company: 'PQR Company' },
+    { name: 'Jennifer Thompson', photo: '/person.jpg', company: 'STU Company' },
 ];
 
 
@@ -23,7 +23,8 @@ const JudgeCard = ({ judge }) => (
                 layout="fill"
             />
         </div>
-        <p className="text-white text-center mt-4">{judge.name}</p>
+        <p className="text-primary text-center mt-4">{judge.name}</p>
+        <p className="text-accent text-center text-sm font-mono">{judge.company}</p>
     </div>
 );
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { format, isBefore, isAfter } from 'date-fns';
 
 const TimelineEvent = ({ date, title, description, isPast, isNearest, isLeft }) => (
@@ -34,8 +34,13 @@ const TimelineEvent = ({ date, title, description, isPast, isNearest, isLeft }) 
   </div>
 );
 
+
+
 const HackathonTimeline = () => {
   const today = new Date();
+  const timelineRef = useRef(null);
+  const [gradientPosition, setGradientPosition] = useState({ x: 50, y: 50 });
+
   const events = [
     { date: new Date('2025-01-18'), title: 'Registration Opens', description: 'Sign up for the hackathon' },
     { date: new Date('2025-02-25'), title: 'Kickoff Event', description: 'Virtual opening ceremony' },
@@ -49,10 +54,28 @@ const HackathonTimeline = () => {
 
   const nearestUpcomingEventIndex = events.findIndex(event => isAfter(event.date, today));
 
+  useEffect(() => {
+    if (timelineRef.current && nearestUpcomingEventIndex !== -1) {
+      const timelineRect = timelineRef.current.getBoundingClientRect();
+      const eventElement = timelineRef.current.children[nearestUpcomingEventIndex];
+      const eventRect = eventElement.getBoundingClientRect();
+
+      const x = ((eventRect.left + eventRect.right) / 2 - timelineRect.left) / timelineRect.width * 100;
+      const y = ((eventRect.top + eventRect.bottom) / 2 - timelineRect.top) / timelineRect.height * 100;
+
+      setGradientPosition({ x, y });
+    }
+  }, [nearestUpcomingEventIndex]);
+
+  const gradientStyle = {
+    background: `radial-gradient(circle at ${gradientPosition.x}% ${gradientPosition.y}%, rgba(var(--accent-rgb), 0.15) 0%, rgba(var(--accent-rgb), 0) 50%)`,
+  };
+
   return (
-    <section id="timeline" className="container mx-auto px-4 max-w-4xl">
-      <h2 className="text-4xl font-bold font-heading text-primary mt-6 mb-12 text-center">Timeline of Events</h2>
-      <div className="relative">
+    <section id="timeline" className="container mx-auto px-4 max-w-4xl relative">
+      <div className="absolute inset-0" style={gradientStyle}></div>
+      <h2 className="text-4xl font-bold font-heading text-primary mt-6 mb-12 text-center relative z-10">Timeline of Events</h2>
+      <div className="relative" ref={timelineRef}>
         <div className="absolute h-full w-0.5 bg-accent left-1/2 transform -translate-x-1/2"></div>
         {events.map((event, index) => (
           <TimelineEvent

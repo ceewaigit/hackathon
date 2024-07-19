@@ -32,7 +32,7 @@ const Footer = () => {
                     <hr className="mt-4 border" />
                     <div className="flex flex-row justify-between items-center">
                         <p className="text-neutral-400 font-medium text-base">© Chong Yong</p>
-                        <img alt="Logo" src="/img/logo/quackers.svg" width="31" height="36" decoding="async" data-nimg="1" loading="lazy" />
+                        <img alt="Logo" src="/img/yes.svg" width="31" height="36" decoding="async" data-nimg="1" loading="lazy" />
                     </div>
                 </div>
             </div>

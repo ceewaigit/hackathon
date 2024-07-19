@@ -57,7 +57,7 @@ const CountdownTimer = () => {
                 <h2 className="text-foreground font-bold text-3xl tracking-tight text-center md:mt-12 mt-6">
                     Till the hacking ends.
                 </h2>
-                <p className="mt-2 text-muted-foreground text-center">Hack on!</p>
+                <p className="mt-2 text-muted-foreground text-center"> Let's get hacking! </p>
             </div>
         </section>
     );

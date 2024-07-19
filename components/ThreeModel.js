@@ -40,4 +40,6 @@ const ThreeModel = memo(({ modelUrl, zoomLength, position, modelPosition }) => {
     );
 });
 
+ThreeModel.displayName = 'ThreeModel';
+
 export default ThreeModel;

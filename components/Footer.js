@@ -33,7 +33,7 @@ const Footer = () => {
                     </div>
                     <hr className="my-8" style={{ borderColor: 'hsl(var(--border))' }} />
                     <div className="flex flex-col md:flex-row justify-between items-center">
-                        <p className="text-base mb-4 md:mb-0" style={{ color: 'hsl(var(--muted-foreground))' }}>©ceewai</p>
+                        <p className="text-base mb-4 md:mb-0" style={{ color: 'hsl(var(--muted-foreground))' }}><a href='https://ceewai.com'>©ceewai</a></p>
                         <img alt="Logo" src="/ceewai.svg" width="31" height="36" decoding="async" data-nimg="1" loading="lazy" className="w-8 h-auto bg-primary rounded-lg" />
                     </div>
                 </div>

@@ -18,7 +18,7 @@ const FAQ = () => {
                     <AccordionItem value="item-1">
                         <AccordionTrigger>Would you lose?</AccordionTrigger>
                         <AccordionContent>
-                            Nah. I'd win.
+                            Nah. Id win.
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-2">
@@ -30,7 +30,7 @@ const FAQ = () => {
                     <AccordionItem value="item-3">
                         <AccordionTrigger>How do you pronounce GIF?</AccordionTrigger>
                         <AccordionContent>
-                            It's pronounced "jif".
+                            It is pronounced &quot;jif&quot;.
                         </AccordionContent>
                     </AccordionItem>
                 </Accordion>

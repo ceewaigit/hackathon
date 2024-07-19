@@ -131,7 +131,7 @@ const Sponsors = () => {
                     Our Sponsors
                 </h2>
                 <p className="text-muted-foreground text-center text-xl max-w-2xl mx-auto mb-16">
-                    We're honored to partner with these industry leaders.
+                    We are honored to partner with these industry leaders.
                 </p>
     
                 {sponsors.map((sponsorTier, tierIndex) => (

@@ -105,3 +105,13 @@ body::-webkit-scrollbar-thumb:hover {
 body::-webkit-scrollbar-button {
   display: none;
 }
+
+@layer utilities {
+  .aspect-square {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+.relative:hover > a > div:last-child {
+  transform: translateX(0);
+}

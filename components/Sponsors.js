@@ -36,21 +36,11 @@ const Sponsors = () => {
                     logo: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Citadel_Securities_logo.jpg',
                     link: 'https://careers.tiktok.com/campus',
                 },
-                {
-                    name: 'Ahrefs',
-                    logo: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Citadel_Securities_logo.jpg',
-                    link: 'https://ahrefs.com/jobs',
-                },
             ],
         },
         {
             tier: 'Silver sponsors',
             companies: [
-                {
-                    name: 'Marshall Wace',
-                    logo: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Citadel_Securities_logo.jpg',
-                    link: 'https://www.mwam.com/join-us/',
-                },
                 {
                     name: 'Citadel',
                     logo: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Citadel_Securities_logo.jpg',
@@ -95,27 +85,79 @@ const Sponsors = () => {
         },
     ]);
 
+    const tierStyles = {
+        'Platinum sponsor': {
+            width: 'calc(30% - 2rem)',
+            minWidth: '300px',
+            maxWidth: '400px',
+        },
+        'Gold sponsors': {
+            width: 'calc(25% - 2rem)',
+            minWidth: '200px',
+            maxWidth: '300px',
+        },
+        'Silver sponsors': {
+            width: 'calc(20% - 2rem)',
+            minWidth: '150px',
+            maxWidth: '250px',
+        },
+        'Bronze sponsors': {
+            width: 'calc(15%)',
+            minWidth: '100px',
+            maxWidth: '200px',
+        },
+    };
+
     return (
-        <section id="sponsors" className="container mx-auto max-w-screen-xl px-4 flex flex-col items-center">
-            <h2 className="font-heading font-bold text-primary mt-6 mb-3 text-center text-4xl ">Sponsors.</h2>
-            <p className="text-hnr-black-70 text-center text-xl font-normal md:w-[528px] mb-12">Major Shoutout to our sponsors for making this event possible!</p>
-            {sponsors.map((sponsorTier, index) => (
-                <div key={index} className="bg-neutral-50 rounded-2xl justify-center shadow-card border border-neutral-200 flex flex-col items-center mt-4 md:px-16 px-8 pb-10 gap-10 w-full">
-                    <div className="-mt-4 px-3 py-1 bg-white rounded-full border border-hnr-black-20 flex flex-col justify-center items-center w-max text-primary-foreground"><p>{sponsorTier.tier}</p></div>
-                    <div className="w-full flex justify-center  flex-row gap-10 items-stretch">
-                        {sponsorTier.companies.map((company, companyIndex) => (
-                            <div key={companyIndex} className="flex flex-row gap-10 justify-evenly">
-                                <a target="_blank" href={company.link} rel="noreferrer">
-                                    <div className="flex-1 flex flex-row justify-center items-center">
-                                        <img className='rounded-[100%]' src={company.logo} alt={company.name} width={company.width || 100} height={company.height || 100} />
-                                    </div>
-                                </a>
-                            </div>
-                        ))}
-                    </div>
+<section id="sponsors" className="py-20 bg-background text-foreground">
+    <div className="container mx-auto px-4">
+        <h2 className="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary text-center mb-4">
+            Our Sponsors
+        </h2>
+        <p className="text-muted-foreground text-center text-xl max-w-2xl mx-auto mb-16">
+            We're honored to partner with these industry leaders.
+        </p>
+
+        {sponsors.map((sponsorTier, tierIndex) => (
+            <div key={tierIndex} className="mb-16">
+                <h3 className="text-2xl font-bold text-center mb-8">
+                    <span className="bg-accent bg-opacity-20 text-primary px-6 py-2 rounded-full">
+                        {sponsorTier.tier}
+                    </span>
+                </h3>
+                <div className="flex flex-wrap justify-center gap-8">
+                    {sponsorTier.companies.map((company, companyIndex) => (
+                        <div 
+                            key={companyIndex} 
+                            className="relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl"
+                            style={tierStyles[sponsorTier.tier]}
+                        >
+                            <a 
+                                href={company.link}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="block w-full h-full"
+                            >
+                                <div className="aspect-square flex items-center justify-center">
+                                    <img
+                                        src={company.logo}
+                                        alt={company.name}
+                                        className="rounded-xl object-contain"
+                                    />
+                                </div>
+                                <div className="absolute inset-y-0 right-0 bg-accent bg-opacity-90 font-mono font-bold rounded-lg w-1/2 transform translate-x-full transition-transform duration-300 flex items-center justify-center">
+                                    <p className="text-accent-foreground font-semibold text-center px-2 whitespace-normal break-words">
+                                        {company.name}
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    ))}
                 </div>
-            ))}
-        </section>
+            </div>
+        ))}
+    </div>
+</section>
     );
 };
 

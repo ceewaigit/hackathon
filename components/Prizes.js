@@ -58,7 +58,7 @@ const Prizes = () => {
       <div>
         <hr className="w-full m-10" />
         <p className="my-3 text-primary font-mono mt-0 z-10 underline text-center">
-          More than <span className='text-accent'>$10,000</span> worth of prizes to be won! <br />
+          More than <span className='text-accent'>$10,000</span> worth of cash to be won! <br />
           More prizes to be announced soon!
         </p>
       </div>

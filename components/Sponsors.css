@@ -1,0 +1,16 @@
+.sponsor-container .company-name {
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+@media (min-width: 768px) {
+    .sponsor-container:hover .company-name {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .company-name {
+        display: none;
+    }
+}

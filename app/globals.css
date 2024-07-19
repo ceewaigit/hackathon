@@ -16,7 +16,7 @@
     --secondary-foreground: 210 40% 98%;
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-    --accent: 265 60% 50%;
+    --accent: 180 64% 45%;
     --accent-foreground: 210 40% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
@@ -29,7 +29,8 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
     --radius: 0.5rem;
-    --accent-rgb: 0, 100, 255;
+    --accent-rgb: 0, 255, 255;
+    --smu: 30 35% 45%;
   }
 
 }
@@ -89,4 +90,13 @@ body::-webkit-scrollbar-button {
 
 .relative:hover > a > div:last-child {
   transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+  html {
+    overflow-x: hidden;
+  }
+  body {
+    overflow-x: hidden;
+  }
 }

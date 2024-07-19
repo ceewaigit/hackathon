@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Hackython",
-  description: "Hackython is a hackathon for developers.",
+  title: "SMU HackBIA",
+  description: "SMUxBIA Data Science Hackathon",
 };
 
 export default function RootLayout({

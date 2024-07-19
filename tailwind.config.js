@@ -63,6 +63,9 @@ module.exports = {
         success: {
           DEFAULT: "hsl(var(--success))",
         },
+        smu: {
+          DEFAULT: "hsl(var(--smu))",
+        },
         boxShadow: {
           sm: 'var(--tw-shadow-sm)',
           DEFAULT: 'var(--tw-shadow)',

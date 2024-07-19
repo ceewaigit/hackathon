@@ -7,15 +7,18 @@ const Header = () => {
             <section className="px-4 sm:px-6 mx-auto max-w-7xl border-muted border-t-2" style={{ background: 'radial-gradient(30.03% 74.25% at 50% 0%, rgb(115, 115, 115) 0%, hsl(222.2 84% 4.9%) 100%);' }}>
                 <div>
                     <div className="flex flex-col relative">
-                        <div className="absolute top-0 left-0 right-0 bottom-0 bg-card rounded-b-2xl -z-10 shadow-md"></div>
                         <div className="flex flex-col items-center mt-16 sm:mt-24 md:mt-[154px] px-4 sm:px-6">
-                            <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold w-full md:w-[750px] mt-2 tracking-tighter text-center font-mono">
-                                The biggest <span className="text-accent">hackython</span><br className="hidden sm:inline" />
-                                of the year.
+                            <h1 className="text-4xl sm:text-5xl md:text-8xl font-semibold w-full md:w-[750px] tracking-tighter text-center font-mono">
+                                <span className="text-accent"> HackBIA </span>
+
                             </h1>
-                            <p className="text-muted-foreground mt-4 sm:mt-6 w-full sm:w-[340px] text-center text-lg sm:text-xl font-normal">
+                            <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold w-full md:w-[750px] mt-2 tracking-tighter text-center font-mono">
+                                The biggest <span className='text-smu'>SMU</span>x<span className="text-accent">BIA</span> hackathon of the year.
+                            </h1>
+                            <p className="text-muted-foreground mt-4 w-full sm:w-[400px] text-center text-lg sm:text-xl font-normal">
                                 Build your dream project, <br className="hidden sm:inline" />
                                 learn new skills, <br className="hidden sm:inline" />
+                                connect with industry professionals, <br className="hidden sm:inline" />
                                 and win amazing prizes.
                             </p>
                             <a href="https://ceewai.com" rel="noreferrer noopener" target="_blank" className="w-full sm:w-auto">

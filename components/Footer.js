@@ -12,8 +12,8 @@ const Footer = () => {
                                 <img src="/ceewai_chi.svg" alt="Logo" className="w-24 h-auto bg-primary rounded-lg" />
                                 <div className="text-center md:text-left">
                                     <p className="text-2xl font-bold font-mono" style={{ color: 'hsl(var(--muted-foreground))' }}>
-                                        CeeWai's Bizzare <br />
-                                        Hackython
+                                        SMUxBIA Data Science <br />
+                                        Hackathon
                                     </p>
                                 </div>
                             </div>
@@ -33,7 +33,7 @@ const Footer = () => {
                     </div>
                     <hr className="my-8" style={{ borderColor: 'hsl(var(--border))' }} />
                     <div className="flex flex-col md:flex-row justify-between items-center">
-                        <p className="text-base mb-4 md:mb-0" style={{ color: 'hsl(var(--muted-foreground))' }}>© Chong Yong</p>
+                        <p className="text-base mb-4 md:mb-0" style={{ color: 'hsl(var(--muted-foreground))' }}>©ceewai</p>
                         <img alt="Logo" src="/ceewai.svg" width="31" height="36" decoding="async" data-nimg="1" loading="lazy" className="w-8 h-auto bg-primary rounded-lg" />
                     </div>
                 </div>

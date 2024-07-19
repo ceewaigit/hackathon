@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const judges = [
     { name: 'John Doe', photo: '/person.jpg', company: 'ABC Company' },
@@ -30,6 +30,11 @@ const JudgeCard = ({ judge }) => (
 
 const Judges = () => {
     const scrollRef = useRef(null);
+    const sectionRef = useRef(null);
+
+    const gradientStyle = {
+        background: `radial-gradient(circle at 50% 70%, rgba(var(--accent-rgb), 0.15) 0%, rgba(var(--accent-rgb), 0) 40%)`,
+    };
 
     useEffect(() => {
         const scrollContainer = scrollRef.current;
@@ -45,12 +50,13 @@ const Judges = () => {
     }, []);
 
     return (
-        <section id="judges" className="container mx-auto max-w-screen-xl px-8 flex flex-col items-center">
-            <h2 className="font-heading font-bold text-white mt-6 mb-3 text-center text-4xl">Judges.</h2>
-            <p className="text-hnr-black-70 text-center text-xl font-normal md:w-[528px]">
+        <section id="judges" ref={sectionRef} className="container mx-auto max-w-screen-xl px-8 flex flex-col items-center relative">
+            <div className="absolute inset-0" style={gradientStyle}></div>
+            <h2 className="font-heading font-bold text-white mt-6 mb-3 text-center text-4xl relative z-10">Judges.</h2>
+            <p className="text-hnr-black-70 text-center text-xl font-normal md:w-[528px] relative z-10">
                 And a massive shout-out to our judges helping us bring out the best in your hacks!
             </p>
-            <div className="mt-10 w-full overflow-hidden transition duration-200 hover:border-accent border-muted border border-2 rounded-lg p-6">
+            <div className="mt-10 w-full overflow-hidden transition duration-200 hover:border-accent border-muted border border-2 rounded-lg p-6 relative z-10">
                 <div
                     ref={scrollRef}
                     className="flex animate-infinite-scroll"

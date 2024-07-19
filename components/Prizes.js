@@ -4,7 +4,7 @@ import React from 'react';
 
 const Prizes = () => {
   return (
-    <section id="prizes" className="container mx-auto max-w-screen-xl px-4 my-16">
+    <section id="prizes" className="container mx-auto max-w-screen-xl pt-4 my-16">
       <h2 className="font-heading font-bold text-primary mt-6 mb-3 text-center text-3xl md:text-4xl">Prizes.</h2>
       <div className="mt-6 flex flex-wrap justify-center gap-4">
         <PrizeCard place="1st place" amount="$5000" image="https://cdn-icons-png.flaticon.com/512/4737/4737496.png" isFirst={true} />

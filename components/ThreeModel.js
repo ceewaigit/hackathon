@@ -33,10 +33,6 @@ const Model = ({ url, modelPosition }) => {
 const ThreeModel = memo(({ modelUrl, zoomLength, position, modelPosition }) => {
     return (
         <Canvas camera={{ position: position, zoom: zoomLength }}>
-            <ambientLight intensity={1} />
-            <directionalLight position={[0, 10, 0]} intensity={1} />
-            <pointLight position={[0, 5, 0]} intensity={2} />
-            <hemisphereLight skyColor={"#ffffff"} groundColor={"#444444"} intensity={0.6} />
             <Suspense fallback={null}>
                 <Model url={modelUrl} modelPosition={modelPosition} />
             </Suspense>

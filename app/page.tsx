@@ -8,6 +8,7 @@ import FAQ from '../components/FAQ.js';
 import Judges from '../components/Judges.js';
 import Menu from '../components/Menu.js';
 import HackathonTimeline from '../components/HackathonTimeline.js';
+import Participants from '../components/Participants.js';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Header />
       <BentoGrid />
       <Prizes />
+      <Participants />
       <FAQ />
       <HackathonTimeline />
       <Sponsors />

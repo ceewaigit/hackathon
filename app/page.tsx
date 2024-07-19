@@ -7,19 +7,19 @@ import Sponsors from '../components/Sponsors.js';
 import FAQ from '../components/FAQ.js';
 import Judges from '../components/Judges.js';
 import Menu from '../components/Menu.js';
+import HackathonTimeline from '../components/HackathonTimeline.js';
 
 export default function Home() {
   return (
     <div>
       <Menu />
       <Header />
-      <main className="flex flex-col gap-5 mt-20">
-        <BentoGrid />
-        <Prizes />
-        <FAQ />
-        <Sponsors />
-        <Judges />
-      </main>
+      <BentoGrid />
+      <Prizes />
+      <FAQ />
+      <HackathonTimeline />
+      <Sponsors />
+      <Judges />
       <Footer />
     </div>
   );

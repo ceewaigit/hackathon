@@ -11,8 +11,8 @@ import {
 
 const FAQ = () => {
     return (
-        <section id="faq" className="container mx-auto max-w-screen-xl px-24 my-16">
-            <div className="container mx-auto max-w-screen-xl px-24 my-16">
+        <section id="faq" className="container mx-auto px-24 my-16">
+            <div className="mx-auto px-24 my-16">
                 <h2 className="font-heading font-bold text-primary mb-3 text-center text-4xl">Frequently Asked Questions.</h2>
                 <Accordion type="single" collapsible>
                     <AccordionItem value="item-1">

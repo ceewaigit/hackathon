@@ -33,7 +33,7 @@ const BentoGrid = () => {
                 </div>
                 <div className="bg-secondary shadow-inner p-4 sm:p-5 rounded-2xl col-span-1 sm:col-span-1 lg:col-span-2 border-accent transition duration-300 ease-in-out hover:border-2 hover:scale-95 shadow shadow-black">
                     <h2 className="text-lg sm:text-xl font-semibold mb-2 font-mono">4. Schedule and Theme</h2>
-                    <p className="text-primary text-sm sm:text-base mb-2"><span className='text-smu'>SMU</span> HackBIA kicks off on August 15th at 6 PM and concludes on August 16th at 6 PM. The theme this year is "Tech for Social Good," challenging participants to develop solutions that address pressing social issues.</p>
+                    <p className="text-primary text-sm sm:text-base mb-2"><span className='text-smu'>SMU</span> HackBIA kicks off on August 15th at 6 PM and concludes on August 16th at 6 PM. The theme this year is &quot;Tech for Social Good,&quot; challenging participants to develop solutions that address pressing social issues.</p>
                     <p className="text-primary text-sm sm:text-base">The event includes workshops, mentoring sessions, and fun activities throughout the 24 hours. Do not miss the opening ceremony and team formation activities!</p>
                 </div>
                 <div className="bg-secondary shadow-inner p-4 sm:p-5 rounded-2xl col-span-1 sm:col-span-1 lg:col-span-1 border-accent transition duration-300 ease-in-out hover:border-2 hover:scale-95 shadow shadow-black">

@@ -56,7 +56,7 @@ const Judges = () => {
             <p className="text-hnr-black-70 text-center text-xl font-normal md:w-[528px] relative z-10">
                 And a massive shout-out to our judges helping us bring out the best in your hacks!
             </p>
-            <div className="mt-10 w-full overflow-hidden transition duration-200 hover:border-accent border-muted border border-2 rounded-lg p-6 relative z-10">
+            <div className="mt-10 w-full overflow-hidden transition duration-200 hover:border-accent border-muted border border-2 rounded-2xl p-6 relative z-10">
                 <div
                     ref={scrollRef}
                     className="flex animate-infinite-scroll"

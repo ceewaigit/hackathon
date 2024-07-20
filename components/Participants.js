@@ -41,7 +41,7 @@ const Participants = () => {
                         />
                     </div>
                     <div className="w-full lg:w-1/2 text-center">
-                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-primary font-mono">Are you a</h2>
+                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-primary">Are you a</h2>
                         <div className="relative h-10 sm:h-12 lg:h-14">
                             {participants.map((participant, index) => (
                                 <div

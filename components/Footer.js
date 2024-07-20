@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Link from 'next/link'; // Import Link from Next.js
 
 const Footer = () => {
     return (
@@ -15,19 +16,23 @@ const Footer = () => {
                                 <div className="text-center md:text-left">
                                     <p className="text-xs font-bold font-mono" style={{ color: 'hsl(var(--muted-foreground))' }}>
                                         Developed with love by <br />
-                                        <span className='text-accent font-bold font-mono'>CeeWai</span>
+                                        <span className='text-accent font-bold font-mono'>
+                                            <a href="https://ceewai.com" target="_blank" rel="noreferrer" className='hover:scale-105 transition-all'>
+                                                ceewai
+                                            </a>
+                                        </span>
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div className="flex flex-col md:flex-row gap-8 text-center md:text-left">
                             <div className="flex flex-col gap-3">
-                                <a href="#about" className="text-base" style={{ color: 'hsl(var(--foreground))', '--hover-color': 'hsl(var(--primary))' }}><span className="hover:text-[color:var(--hover-color)]">About</span></a>
+                                <Link href="/rules" className="text-base" style={{ color: 'hsl(var(--foreground))', '--hover-color': 'hsl(var(--primary))' }}><span className="hover:text-[color:var(--hover-color)]">Rules</span></Link>
                                 <a href="#prizes" className="text-base" style={{ color: 'hsl(var(--foreground))', '--hover-color': 'hsl(var(--primary))' }}><span className="hover:text-[color:var(--hover-color)]">Prizes</span></a>
                                 <a href="#sponsors" className="text-base" style={{ color: 'hsl(var(--foreground))', '--hover-color': 'hsl(var(--primary))' }}><span className="hover:text-[color:var(--hover-color)]">Sponsors</span></a>
                             </div>
                             <div className="flex flex-col gap-3">
-                                <a href="/privacy" className="text-base" style={{ color: 'hsl(var(--foreground))', '--hover-color': 'hsl(var(--primary))' }}><span className="hover:text-[color:var(--hover-color)]">Privacy policy</span></a>
+                                <Link href="/privacy" className="text-base" style={{ color: 'hsl(var(--foreground))', '--hover-color': 'hsl(var(--primary))' }}><span className="hover:text-[color:var(--hover-color)]">Privacy policy</span></Link>
                                 <a href="mailto:yes@yes.com" className="text-base" style={{ color: 'hsl(var(--foreground))', '--hover-color': 'hsl(var(--primary))' }}><span className="hover:text-[color:var(--hover-color)]">Contact us</span></a>
                                 <a href="#faq" className="text-base" style={{ color: 'hsl(var(--foreground))', '--hover-color': 'hsl(var(--primary))' }}><span className="hover:text-[color:var(--hover-color)]">FAQs</span></a>
                             </div>

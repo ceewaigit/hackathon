@@ -5,7 +5,7 @@ const TimelineEvent = ({ date, title, description, isPast, isNearest, isLeft }) 
   <div className={`mb-8 flex w-full ${isLeft ? 'flex-row' : 'flex-row-reverse'} items-center justify-center`}>
     <div className={`w-5/12 ${isLeft ? 'text-right pr-2 md:pr-4' : 'text-left pl-2 md:pl-4'}`}>
       {isLeft ? (
-        <div className={`p-2 md:p-4 rounded-lg ${isPast ? 'bg-none text-muted-foreground' : isNearest ? 'bg-accent text-accent-foreground' : 'bg-none text-secondary-foreground'}`}>
+        <div className={`p-2 md:p-4 rounded-lg ${isPast ? 'bg-none text-muted-foreground' : isNearest ? 'bg-accent text-secondary' : 'bg-none text-secondary-foreground'}`}>
           <h3 className="font-bold text-sm md:text-lg font-mono">{title}</h3>
           <p className="text-xs md:text-sm mt-1">{description}</p>
         </div>
@@ -25,7 +25,7 @@ const TimelineEvent = ({ date, title, description, isPast, isNearest, isLeft }) 
       {isLeft ? (
         <div className="text-xs md:text-sm">{format(date, 'd MMM')}</div>
       ) : (
-        <div className={`p-2 md:p-4 rounded-lg ${isPast ? 'bg-muted text-muted-foreground' : isNearest ? 'bg-accent text-accent-foreground' : 'bg-none text-secondary-foreground'}`}>
+        <div className={`p-2 md:p-4 rounded-lg ${isPast ? 'bg-muted text-muted-foreground' : isNearest ? 'bg-accent text-secondary' : 'bg-none text-secondary-foreground'}`}>
           <h3 className="font-bold text-sm md:text-lg font-mono">{title}</h3>
           <p className="text-xs md:text-sm mt-1">{description}</p>
         </div>

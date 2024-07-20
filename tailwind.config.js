@@ -26,6 +26,9 @@ module.exports = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        backgroundImage: {
+          'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -75,6 +78,8 @@ module.exports = {
           '2xl': 'var(--tw-shadow-2xl)',
           inner: 'var(--tw-shadow-inner)',
           none: 'var(--tw-shadow-none)',
+          'glow': '0 0 15px 0 rgba(255, 255, 255, 0.1)',
+          'glow-hover': '0 0 20px 0 rgba(255, 255, 255, 0.2)',
         },
       },
       borderRadius: {
@@ -103,4 +108,18 @@ module.exports = {
       },
     },
   },
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.text-glow': {
+          textShadow: '0 0 5px rgba(255, 255, 255, 0.1)',
+        },
+        '.bg-glass': {
+          backgroundColor: 'rgba(42, 42, 42, 0.7)',
+          backdropFilter: 'blur(10px)',
+        },
+      }
+      addUtilities(newUtilities)
+    },
+  ],
 }

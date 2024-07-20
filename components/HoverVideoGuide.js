@@ -92,7 +92,7 @@ const HoverVideoGuide = ({ steps }) => {
                                 left: initialPosition.x + dampenedMovement.x + 350,
                                 top: initialPosition.y + dampenedMovement.y - 100,
                                 transform: `translateY(-50%)`,
-                                maxWidth: 'calc(100vw - 100%)',
+                                maxWidth: '40vw',
                                 maxHeight: '60vh',
                             }}
                         >

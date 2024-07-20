@@ -48,7 +48,7 @@ const HoverVideoGuide = ({ steps }) => {
             >
                 Recommended Checkpoints
             </motion.h2>
-            <div className="flex flex-col md:flex-row items-start justify-between gap-8 relative">
+            <div className="flex flex-col mx-8 md:flex-row items-start justify-between gap-8 relative">
                 <ul ref={listRef} className="space-y-4 w-full md:w-1/4">
                     {steps.map((step, index) => (
                         <motion.li
@@ -58,7 +58,7 @@ const HoverVideoGuide = ({ steps }) => {
                             transition={{ duration: 0.5, delay: 0.1 * index }}
                         >
                             <motion.div
-                                className="p-4 rounded-full transition-all duration-100 pt-4 cursor-default"
+                                className="p-4 rounded-xl transition-all duration-100 pt-4 cursor-default"
                                 whileHover={{
                                     backgroundColor: 'rgba(255, 255, 255, 0.1)',
                                     scale: 1.05,
@@ -83,7 +83,7 @@ const HoverVideoGuide = ({ steps }) => {
                 <AnimatePresence>
                     {activeStep && (
                         <motion.div
-                            className="absolute md:w-3/4 aspect-video rounded-2xl overflow-hidden shadow-lg shadow-slate-800"
+                            className="absolute md:w-full aspect-video rounded-2xl overflow-hidden shadow-lg shadow-slate-800"
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.8 }}

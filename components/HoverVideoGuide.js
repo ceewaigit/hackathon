@@ -89,7 +89,7 @@ const HoverVideoGuide = ({ steps }) => {
                             exit={{ opacity: 0, scale: 0.8 }}
                             transition={{ duration: 0.3 }}
                             style={{
-                                left: initialPosition.x + dampenedMovement.x + 350,
+                                left: initialPosition.x + dampenedMovement.x + 300,
                                 top: initialPosition.y + dampenedMovement.y - 100,
                                 transform: `translateY(-50%)`,
                                 maxWidth: '40vw',

@@ -42,7 +42,7 @@ const CountdownTimer = () => {
     return (
         <section className="container mx-auto max-w-screen-xl px-4 sm:px-6 md:px-8 lg:px-12">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tighter text-center text-foreground font-mono">
-                The <span className="text-accent underline">datathon</span> timer.
+                The <span className="text-accent underline font-mono">datathon</span> timer.
             </h1>
             <div className="rounded-[20px] flex flex-col items-center py-8 px-3 shadow-card mt-5 bg-card">
                 <div className="flex flex-wrap justify-center text-foreground text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter p-3 gap-3">

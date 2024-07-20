@@ -7,10 +7,9 @@ const Header = () => {
             <section className="px-4 sm:px-6 mx-auto max-w-7xl border-muted border-t-2" style={{ background: 'radial-gradient(30.03% 74.25% at 50% 0%, rgb(115, 115, 115) 0%, hsl(222.2 84% 4.9%) 100%);' }}>
                 <div>
                     <div className="flex flex-col relative">
-                        <div className="flex flex-col items-center mt-16 sm:mt-24 md:mt-[154px] px-4 sm:px-6">
+                        <div className="flex flex-col items-center mt-16 sm:mt-20 px-4 sm:px-6">
                             <h1 className="text-4xl sm:text-5xl md:text-8xl font-semibold w-full md:w-[750px] tracking-tighter text-center font-mono">
                                 <span className="text-accent">HackBIA 2025</span>
-
                             </h1>
                             <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold w-full md:w-[750px] mt-2 tracking-tighter text-center font-mono">
                                 The biggest <span className='text-smu'>SMU</span>x<span className="text-accent">BIA</span> hackathon of the year.

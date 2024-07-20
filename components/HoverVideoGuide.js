@@ -83,7 +83,7 @@ const HoverVideoGuide = ({ steps }) => {
                 <AnimatePresence>
                     {activeStep && (
                         <motion.div
-                            className="absolute md:w-full aspect-video rounded-2xl overflow-hidden shadow-lg shadow-slate-800"
+                            className="absolute md:w-full rounded-2xl overflow-hidden shadow-lg shadow-slate-800"
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.8 }}
@@ -92,8 +92,8 @@ const HoverVideoGuide = ({ steps }) => {
                                 left: initialPosition.x + dampenedMovement.x + 300,
                                 top: initialPosition.y + dampenedMovement.y - 100,
                                 transform: `translateY(-50%)`,
-                                maxWidth: '40vw',
-                                maxHeight: '60vh',
+                                maxWidth: '30vw',
+                                maxHeight: '70vh',
                             }}
                         >
                             <video

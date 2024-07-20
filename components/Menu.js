@@ -34,9 +34,9 @@ const Menu = () => {
                 </div>
 
                 <div className="hidden sm:block sm:flex-1 sm:text-right">
-                    <a className="" target="_blank" rel="noopener noreferrer" href="https://ceewai.com">
+                    <a className="" target="_blank" rel="noopener noreferrer" href="https://smubia.com/">
                         <div className="inline-flex items-center font-medium text-xs rounded-full border-secondary transition hover:border-accent hover:scale-105 bg-secondary text-secondary-foreground border px-4 py-2">
-                            <span>Brought to you by</span><img src="/ceewai.svg" className="inline-block ml-2 w-[25px] bg-primary rounded-full" alt="ceewai logo" />
+                            <span>Brought to you by</span><img src="/smubia_logo.jpeg" className="inline-block ml-2 w-[25px] bg-primary rounded-full" alt="bia logo" />
                         </div>
                     </a>
                 </div>
@@ -52,9 +52,9 @@ const Menu = () => {
                         <a href="#timeline" className="py-2"><span className="font-medium transition hover:text-accent">Timeline</span></a>
                         <Link href="/rules" className="text-base py-2"><span className="font-medium transition hover:text-accent">Rules</span></Link>
                         <Link href="/privacy" className="text-base py-2"><span className="font-medium transition hover:text-accent">Privacy policy</span></Link>
-                        <a className="mt-4" target="_blank" rel="noopener noreferrer" href="https://ceewai.com">
+                        <a className="mt-4" target="_blank" rel="noopener noreferrer" href="https://smubia.com/">
                             <div className="inline-flex items-center font-medium text-xs rounded-full border-secondary transition hover:border-accent hover:scale-105 bg-secondary text-secondary-foreground border px-4 py-2">
-                                <span>Brought to you by</span><img src="/ceewai.svg" className="inline-block ml-2 w-[25px] bg-primary rounded-full" alt="ceewai logo" />
+                                <span>Brought to you by</span><img src="/smubia_logo.jpeg" className="inline-block ml-2 w-[25px] bg-primary rounded-full" alt="bia logo" />
                             </div>
                         </a>
                     </div>

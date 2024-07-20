@@ -9,6 +9,7 @@ import Judges from '../components/Judges.js';
 import Menu from '../components/Menu.js';
 import HackathonTimeline from '../components/HackathonTimeline.js';
 import Participants from '../components/Participants.js';
+import ProjectShowcasePage from '../components/ProjectShowcasePage.js';
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Prizes />
       <FAQ />
       <HackathonTimeline />
+      <ProjectShowcasePage />
       <Sponsors />
       <Judges />
       <Participants />

@@ -60,7 +60,7 @@ const Participants = () => {
 
                         <p className=' text-lg sm:text-xl lg:text-2xl text-primary font-mono pt-10'> You can reach out to us 
                             <br />
-                            <a href="mailto:yes@yes.com" className="underline text-accent transition duration-200 hover:scale-105">here</a>!
+                            <a href="mailto:yes@yes.com" className="underline text-accent transition duration-200 hover:scale-105 font-bold">here</a>!
                         </p>
                     </div>
                 </div>

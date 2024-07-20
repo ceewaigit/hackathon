@@ -8,11 +8,11 @@ const BentoGrid = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div className="bg-secondary shadow-inner p-4 sm:p-5 rounded-2xl border-accent transition duration-300 ease-in-out hover:border-2 hover:scale-95 shadow shadow-black">
                     <h2 className="text-lg sm:text-xl font-semibold mb-2 font-mono">1. What is <span className='text-smu'>SMU</span> HackBIA? 🤔</h2>
-                    <p className="text-primary text-sm sm:text-base"><span className='text-smu'>SMU</span> HackBIA is an exciting datathon hosted by <span className='text-smu'>SMU</span>s Business Intelligence & Analytics. It is a platform for students to collaborate, innovate, and create impactful solutions to real-world problems using technology. 🚀</p>
+                    <p className="text-primary text-sm sm:text-base"><span className='text-smu'>SMU</span> HackBIA is an exciting datathon hosted by <span className='text-smu'>SMU</span>&apos;s Business Intelligence & Analytics. It is a platform for students to collaborate, innovate, and create impactful solutions to real-world problems using technology. 🚀</p>
                 </div>
                 <div className="bg-secondary shadow-inner p-4 sm:p-5 rounded-2xl sm:col-span-1 border-accent transition duration-300 ease-in-out hover:border-2 hover:scale-95 shadow shadow-black">
                     <h2 className="text-lg sm:text-xl font-semibold mb-2 font-mono">2. Who Can Participate?</h2>
-                    <p className="text-primary text-sm sm:text-base"><span className='text-smu'>SMU</span> HackBIA is open to all university students, regardless of their major or coding experience. Whether you are a seasoned programmer or a curious beginner, you are welcome to join and learn! 👩‍💻👨‍💻</p>
+                    <p className="text-primary text-sm sm:text-base"><span className='text-smu'>SMU</span> HackBIA is open to all students, regardless of their university, major or coding experience. Whether you are a seasoned programmer or a curious beginner, you are welcome to join and learn! 👩‍💻👨‍💻</p>
                 </div>
                 <div className="bg-secondary shadow-inner p-1 rounded-2xl row-span-1 sm:row-span-2 border-accent transition duration-300 ease-in-out shadow shadow-black">
                     <iframe
@@ -28,8 +28,7 @@ const BentoGrid = () => {
                 </div>
                 <div className="bg-secondary shadow-inner p-4 sm:p-5 rounded-2xl col-span-1 border-accent transition duration-300 ease-in-out hover:border-2 hover:scale-95 shadow shadow-black">
                     <h2 className="text-lg sm:text-xl font-semibold mb-2 font-mono">3. What should I build? 💡</h2>
-                    <p className="text-primary text-sm sm:text-base mb-2">You can build anything you want! Whether it is a web app, mobile app, data visualization, or machine learning model, the possibilities are endless. Be creative and think outside the box! 🌟</p>
-                    <p className="text-primary text-sm sm:text-base">Try to think of a problem that you are passionate about solving and develop a solution that can make a positive impact! 🌍❤️</p>
+                    <p className="text-primary text-sm sm:text-base mb-2">You can build anything you want! Whether it is a web app, mobile app, data visualization, or machine learning model, the possibilities are endless. Be innovative, aim big, change the world! 🌟🚀</p>
                 </div>
                 <div className="bg-secondary flex shadow-inner p-4 md:pt-0 rounded-2xl col-span-1 sm:col-span-1 lg:col-span-2 border-accent transition duration-300 ease-in-out hover:border-2 hover:scale-95 shadow shadow-black">
                     <img src="./calandar.png" alt="Placeholder" className="hidden md:block h-[intrinsic] w-1/5 mx-auto" />

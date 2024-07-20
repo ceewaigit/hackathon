@@ -63,13 +63,13 @@ const Rules = () => {
                                     <strong>Rule 8:</strong> Participants must attend the mandatory briefing session to understand the rules and judging criteria.
                                 </li>
                                 <li className="transition duration-500 ease-in-out transform hover:-translate-y-1">
-                                    <strong>Rule 9:</strong> Judges' decisions are final and binding. Appeals will not be entertained.
+                                    <strong>Rule 9:</strong> Judges&apos; decisions are final and binding. Appeals will not be entertained.
                                 </li>
                                 <li className="transition duration-500 ease-in-out transform hover:-translate-y-1">
                                     <strong>Rule 10:</strong> Participants must respect the intellectual property rights of others. Any IP violations will result in disqualification.
                                 </li>
                                 <li className="transition duration-500 ease-in-out transform hover:-translate-y-1">
-                                    <strong>Rule 11:</strong> Teams are encouraged to seek help and guidance, but the final project must be the team's own work.
+                                    <strong>Rule 11:</strong> Teams are encouraged to seek help and guidance, but the final project must be the team&apos;s own work.
                                 </li>
                                 <li className="transition duration-500 ease-in-out transform hover:-translate-y-1">
                                     <strong>Rule 12:</strong> Use of harmful or unethical practices is prohibited and will lead to immediate disqualification.

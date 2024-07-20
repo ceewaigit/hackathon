@@ -17,7 +17,7 @@ const FAQ = () => {
                     <AccordionItem value="item-1">
                         <AccordionTrigger>What is the format of this hackathon?</AccordionTrigger>
                         <AccordionContent>
-                            Our hackathon combines learning and hands-on project development. We'll have lessons on various tech topics, followed by project work sessions where you can apply what you've learned.
+                            Our hackathon combines learning and hands-on project development. We&apos;ll have lessons on various tech topics, followed by project work sessions where you can apply what you&apos;ve learned.
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-2">
@@ -35,13 +35,13 @@ const FAQ = () => {
                     <AccordionItem value="item-5">
                         <AccordionTrigger>Do I need to attend all the lessons?</AccordionTrigger>
                         <AccordionContent>
-                            While we encourage attending all lessons to get the most out of the experience, it's not mandatory. You can choose the sessions most relevant to your interests and project.
+                            While we encourage attending all lessons to get the most out of the experience, it&apos;s not mandatory. You can choose the sessions most relevant to your interests and project.
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-6">
                         <AccordionTrigger>Can I work on my own project idea?</AccordionTrigger>
                         <AccordionContent>
-                            Absolutely! We encourage you to bring your own ideas. However, we'll also provide project suggestions if you need inspiration.
+                            Absolutely! We encourage you to bring your own ideas. However, we&apos;ll also provide project suggestions if you need inspiration.
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-7">
@@ -59,7 +59,7 @@ const FAQ = () => {
                     <AccordionItem value="item-10">
                         <AccordionTrigger>Will there be mentors available?</AccordionTrigger>
                         <AccordionContent>
-                            Yes, we'll have experienced mentors available throughout the hackathon to help with technical questions and provide guidance on your projects.
+                            Yes, we&apos;ll have experienced mentors available throughout the hackathon to help with technical questions and provide guidance on your projects.
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-11">

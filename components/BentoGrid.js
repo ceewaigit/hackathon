@@ -31,9 +31,9 @@ const BentoGrid = () => {
                     <p className="text-primary text-sm sm:text-base mb-2">You can build anything you want! Whether it is a web app, mobile app, data visualization, or machine learning model, the possibilities are endless. Be creative and think outside the box! 🌟</p>
                     <p className="text-primary text-sm sm:text-base">Try to think of a problem that you are passionate about solving and develop a solution that can make a positive impact! 🌍❤️</p>
                 </div>
-                <div className="bg-secondary flex shadow-inner pt-0 pb-4 px-8 rounded-2xl col-span-1 sm:col-span-1 lg:col-span-2 border-accent transition duration-300 ease-in-out hover:border-2 hover:scale-95 shadow shadow-black">
-                    <img src="./calandar.png" alt="Placeholder" className="w-1/4 h-auto mx-auto" />
-                    <div className="flex flex-col p-8">
+                <div className="bg-secondary flex shadow-inner p-4 md:pt-0 rounded-2xl col-span-1 sm:col-span-1 lg:col-span-2 border-accent transition duration-300 ease-in-out hover:border-2 hover:scale-95 shadow shadow-black">
+                    <img src="./calandar.png" alt="Placeholder" className="hidden md:block w-1/4 h-auto mx-auto" />
+                    <div className="flex flex-col p-0 md:p-8">
                         <h2 className="text-lg sm:text-xl font-semibold mb-2 font-mono">4. Schedule and Theme</h2>
                         <p className="text-primary text-sm sm:text-base mb-2"><span className='text-smu'>SMU</span> HackBIA kicks off on August 15th at 6 PM and concludes on August 16th at 6 PM. The theme this year is &quot;Tech for Social Good,&quot; challenging participants to develop solutions that address pressing social issues. 🤝🌟</p>
                         <p className="text-primary text-sm sm:text-base">The event includes workshops, mentoring sessions, and fun activities throughout the 24 hours. Do not miss the opening ceremony and team formation activities! 🎉</p>
@@ -47,7 +47,6 @@ const BentoGrid = () => {
                 </div>
             </div>
         </section>
-
     );
 };
 

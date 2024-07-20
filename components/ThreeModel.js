@@ -3,7 +3,7 @@
 'use client';
 
 import React, { Suspense, useEffect, memo, useMemo } from 'react';
-import { Canvas } from '@react-three/fiber';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { useGLTF, useAnimations } from '@react-three/drei';
 
 const Model = ({ url, modelPosition }) => {
@@ -30,11 +30,27 @@ const Model = ({ url, modelPosition }) => {
     return <primitive object={memoizedScene} ref={ref} position={modelPosition} />;
 };
 
+const RotatingModel = ({ url, modelPosition }) => {
+    const groupRef = React.useRef();
+
+    useFrame((state, delta) => {
+        if (groupRef.current) {
+            groupRef.current.rotation.y += delta * 0.05; // Adjust the 0.2 value to control rotation speed
+        }
+    });
+
+    return (
+        <group ref={groupRef}>
+            <Model url={url} modelPosition={modelPosition} />
+        </group>
+    );
+};
+
 const ThreeModel = memo(({ modelUrl, zoomLength, position, modelPosition }) => {
     return (
         <Canvas camera={{ position: position, zoom: zoomLength }}>
             <Suspense fallback={null}>
-                <Model url={modelUrl} modelPosition={modelPosition} />
+                <RotatingModel url={modelUrl} modelPosition={modelPosition} />
             </Suspense>
         </Canvas>
     );

@@ -1,14 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import useInView from './hooks/useInView.js';
 
 const HoverVideoGuide = ({ steps }) => {
     const [activeStep, setActiveStep] = useState(null);
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
     const [initialPosition, setInitialPosition] = useState({ x: 0, y: 0 });
     const listRef = useRef(null);
-    const containerRef = useRef(null);
-    const isInView = useInView(containerRef, { threshold: 0.1 });
 
     useEffect(() => {
         const handleMouseMove = (e) => {
@@ -38,16 +35,15 @@ const HoverVideoGuide = ({ steps }) => {
 
     return (
         <motion.div 
-            ref={containerRef}
-            className="container mx-auto py-16 text-primary "
+            className="container mx-auto py-16 text-primary"
             initial={{ opacity: 0, y: 50 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
         >
             <motion.h2 
                 className="text-4xl font-bold mb-16 text-center"
                 initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
             >
                 Recommended Checkpoints
@@ -58,7 +54,7 @@ const HoverVideoGuide = ({ steps }) => {
                         <motion.li
                             key={index}
                             initial={{ opacity: 0, x: -20 }}
-                            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5, delay: 0.1 * index }}
                         >
                             <motion.div

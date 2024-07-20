@@ -17,7 +17,7 @@ const Prizes = () => {
       </div>
       <div>
         <hr className="w-full m-10" />
-        <p className="my-3 text-primary font-mono mt-0 z-10 underline text-center text-sm md:text-base">
+        <p className="my-3 text-primary font-mono mt-0 z-10 text-center text-sm md:text-base">
           More than <span className='text-accent'>$10,000</span> worth of cash to be won! <br />
           More prizes to be announced soon!
         </p>

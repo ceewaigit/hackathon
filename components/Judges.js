@@ -14,7 +14,7 @@ const judges = [
 
 
 const JudgeCard = ({ judge }) => (
-    <div className="flex-shrink-0 w-[100px] mx-8 flex flex-col items-center">
+    <div className="flex-shrink-0 w-[100px] mx-8 my-28 flex flex-col items-center">
         <div className="w-24 h-24 relative">
             <Image
                 className='rounded-xl object-cover'

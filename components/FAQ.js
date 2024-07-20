@@ -11,7 +11,7 @@ import {
 
 const FAQ = () => {
     return (
-        <section id="faq" className="container mx-auto mt-6 px-4 sm:px-6 lg:px-8 my-8">
+        <section id="faq" className="container mx-auto my-28 px-4 sm:px-6 lg:px-8 my-8">
             <div className="mx-auto max-w-2xl">
                 <h2 className="font-heading font-bold text-primary mb-3 text-center text-4xl">Frequently Asked Questions.</h2>
                 <Accordion type="single" collapsible>

@@ -9,11 +9,13 @@ const Footer = () => {
                     <div className="flex flex-col md:flex-row justify-between gap-10">
                         <div className="flex flex-col items-center md:items-start">
                             <div className="flex items-center gap-7 mb-8 md:mb-0">
-                                <img src="/ceewai_chi.svg" alt="Logo" className="w-24 h-auto bg-primary rounded-lg" />
+                                <a href="https://ceewai.com" target="_blank" rel="noreferrer" className='hover:scale-105 transition-transform duration-400 ease-in-out transform hover:animate-bounce'>
+                                    <img src="/ceewai_chi.svg" alt="Logo" className="w-16 h-auto bg-primary rounded-lg" />
+                                </a>
                                 <div className="text-center md:text-left">
-                                    <p className="text-2xl font-bold font-mono" style={{ color: 'hsl(var(--muted-foreground))' }}>
-                                        SMUxBIA Data Science <br />
-                                        Hackathon
+                                    <p className="text-xs font-bold font-mono" style={{ color: 'hsl(var(--muted-foreground))' }}>
+                                        Developed with love by <br />
+                                        <span className='text-accent font-bold font-mono'>CeeWai</span>
                                     </p>
                                 </div>
                             </div>
@@ -33,7 +35,7 @@ const Footer = () => {
                     </div>
                     <hr className="my-8" style={{ borderColor: 'hsl(var(--border))' }} />
                     <div className="flex flex-col md:flex-row justify-between items-center">
-                        <p className="text-base mb-4 md:mb-0" style={{ color: 'hsl(var(--muted-foreground))' }}><a href='https://ceewai.com'>©ceewai</a></p>
+                        <p className="text-base mb-4 md:mb-0" style={{ color: 'hsl(var(--muted-foreground))' }}><a href='https://ceewai.com'>© SMU 2025</a></p>
                         <img alt="Logo" src="/ceewai.svg" width="31" height="36" decoding="async" data-nimg="1" loading="lazy" className="w-8 h-auto bg-primary rounded-lg" />
                     </div>
                 </div>

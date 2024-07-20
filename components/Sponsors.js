@@ -125,7 +125,7 @@ const Sponsors = () => {
     };
     
     return (
-        <section id="sponsors" className="py-20 bg-background text-foreground">
+        <section id="sponsors" className="py-28 bg-background text-foreground">
             <div className="container mx-auto px-4">
                 <h2 className="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary text-center mb-4">
                     Our Sponsors

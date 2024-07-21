@@ -102,3 +102,22 @@ html {
 body {
   overflow-x: hidden;
 }
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+.gradient-animation {
+  background: hsl(var(--muted));
+  background-size: 300%;
+  background-image: linear-gradient(-45deg, #a4456d, #8e3e66, #c559d5, #43b1e4);
+  animation: bg-animation 20s infinite;
+}

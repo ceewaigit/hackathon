@@ -27,7 +27,7 @@ const Participants = () => {
     }, []);
 
     return (
-        <div className="min-h-screen flex my-28 items-center justify-center px-4 sm:px-6 lg:px-8" style={{
+        <div className="min-h-screen flex my-12 items-center justify-center px-4 sm:px-6 lg:px-8" style={{
             background: 'radial-gradient(circle, rgba(var(--accent-rgb), 0.15) 0%, rgba(var(--accent-rgb), 0) 40%)'
         }}>
             <div className="w-full max-w-7xl">

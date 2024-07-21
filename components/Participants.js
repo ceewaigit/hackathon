@@ -56,7 +56,7 @@ const Participants = () => {
                                 </div>
                             ))}
                         </div>
-                        <p className="text-lg sm:text-xl lg:text-2xl text-primary">interested supporting the hacker culture?</p>
+                        <p className="text-lg sm:text-xl lg:text-2xl text-primary">interested in supporting the hacker culture?</p>
 
                         <p className=' text-lg sm:text-xl lg:text-2xl text-primary font-mono pt-10'> You can reach out to us 
                             <br />

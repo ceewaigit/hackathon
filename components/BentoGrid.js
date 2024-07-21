@@ -4,7 +4,7 @@ import './BentoGrid.css';
 
 const BentoGrid = () => {
     return (
-        <section id="about" className="p-4 sm:p-8 md:p-16 mx-4 sm:mx-8 md:mx-16 text-foreground">
+        <section id="about" className="p-4 sm:p-8 md:p-16 mx-4 sm:mx-8 md:mx-16 text-foreground mt-16">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div className="bg-secondary shadow-inner p-4 sm:p-5 rounded-2xl border-accent transition duration-300 ease-in-out hover:border-2 hover:scale-95 shadow shadow-black">
                     <h2 className="text-lg sm:text-xl font-semibold mb-2 font-mono">1. What is <span className='text-smu'>SMU</span> HackBIA? 🤔</h2>
@@ -28,7 +28,7 @@ const BentoGrid = () => {
                 </div>
                 <div className="bg-secondary shadow-inner p-4 sm:p-5 rounded-2xl col-span-1 border-accent transition duration-300 ease-in-out hover:border-2 hover:scale-95 shadow shadow-black">
                     <h2 className="text-lg sm:text-xl font-semibold mb-2 font-mono">3. What should I build? 💡</h2>
-                    <p className="text-primary text-sm sm:text-base mb-2">You can build anything you want! Whether it is a web app, mobile app, data visualization, or machine learning model, the possibilities are endless. Be innovative, aim big, change the world! 🌟🚀</p>
+                    <p className="text-primary text-sm sm:text-base mb-2">You can build anything you want! Whether it is a web app, mobile app, data visualization, or machine learning model, the possibilities are endless. <br />Be innovative, aim big, change the world! 🌟🚀</p>
                 </div>
                 <div className="bg-secondary flex shadow-inner p-4 md:pt-0 rounded-2xl col-span-1 sm:col-span-1 lg:col-span-2 border-accent transition duration-300 ease-in-out hover:border-2 hover:scale-95 shadow shadow-black">
                     <img src="./calandar.png" alt="Placeholder" className="hidden md:block h-[min-content] w-1/5 mx-auto" />

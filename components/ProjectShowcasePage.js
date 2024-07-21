@@ -14,18 +14,18 @@ const projects = [
         videoUrl: "/videos/buffswim.mp4"
     },
     {
-        title: "Start building!",
+        title: "Build your project!",
         description: "Start cooking",
         videoUrl: "/videos/sweatycode.mp4"
     },
     {
         title: "Record a video of your project!",
-        description: "Record a video of your project!",
+        description: "Show us visually what you've done!",
         videoUrl: "/videos/shia.mp4"
     },
     {
         title: "Write up the project description!",
-        description: "Tell us about your project!",
+        description: "Convey your vision in a document!",
         videoUrl: "/videos/firewriting.mp4"
     },
     {
@@ -37,13 +37,13 @@ const projects = [
     {
         title: "Present your project!",
         date: "04/01/2025",
-        description: "Pitch and sell your vision!",
+        description: "Top 10 teams will pitch and their your vision!",
         videoUrl: "/videos/buffsuit.mp4"
     },
     {
-        title: "Win!",
+        title: "win.",
         description: "If anything, it is about the friends we made along the way. But also the prizes.",
-        videoUrl: "/videos/rickroll.mp4"
+        videoUrl: "/videos/idwin.mp4"
     }
 ];
 

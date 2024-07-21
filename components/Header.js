@@ -8,8 +8,8 @@ const Header = () => {
                 <div>
                     <div className="flex flex-col relative">
                         <div className="flex flex-col items-center mt-20 sm:mt-24 px-4 sm:px-6">
-                            <h1 className="text-4xl sm:text-5xl md:text-8xl font-semibold w-full md:w-[750px] tracking-tighter text-center font-mono">
-                                <span className="">HackBIA 2025</span>
+                            <h1 className="text-4xl sm:text-5xl md:text-8xl font-bold w-full md:w-[750px] text-center font-mono">
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary">HackBIA <br /> 2025</span>
                             </h1>
                             <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold w-full md:w-[750px] mt-2 tracking-tighter text-center font-mono">
                                 The biggest <span className='text-smu'>SMU</span>x<span className="text-accent">BIA</span> hackathon of the year.

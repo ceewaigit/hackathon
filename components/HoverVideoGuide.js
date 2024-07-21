@@ -5,9 +5,18 @@ const HoverVideoGuide = ({ steps }) => {
     const [activeStep, setActiveStep] = useState(null);
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
     const [initialPosition, setInitialPosition] = useState({ x: 0, y: 0 });
+    const [isMobile, setIsMobile] = useState(false);
     const listRef = useRef(null);
+    const videoRef = useRef(null);
 
     useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth <= 768); // Adjust this breakpoint as needed
+        };
+
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+
         const handleMouseMove = (e) => {
             if (listRef.current) {
                 const { left, top } = listRef.current.getBoundingClientRect();
@@ -19,12 +28,17 @@ const HoverVideoGuide = ({ steps }) => {
         };
 
         listRef.current?.addEventListener('mousemove', handleMouseMove);
-        return () => listRef.current?.removeEventListener('mousemove', handleMouseMove);
+        return () => {
+            listRef.current?.removeEventListener('mousemove', handleMouseMove);
+            window.removeEventListener('resize', checkMobile);
+        };
     }, []);
 
     const handleMouseEnter = (step) => {
-        setActiveStep(step);
-        setInitialPosition({ ...cursorPosition });
+        if (!isMobile) {
+            setActiveStep(step);
+            setInitialPosition({ ...cursorPosition });
+        }
     };
 
     // Calculate dampened movement
@@ -33,21 +47,50 @@ const HoverVideoGuide = ({ steps }) => {
         y: (cursorPosition.y - initialPosition.y) * 0.1
     };
 
+    const calculateVideoPosition = () => {
+        if (!videoRef.current || !listRef.current) return { left: 0, top: 0 };
+
+        const listRect = listRef.current.getBoundingClientRect();
+        const videoRect = videoRef.current.getBoundingClientRect();
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+
+        let left = initialPosition.x + dampenedMovement.x + 350;
+        let top = initialPosition.y + dampenedMovement.y - 100;
+
+        // Adjust horizontal position
+        if (left + videoRect.width > viewportWidth) {
+            left = viewportWidth - videoRect.width - 20; // 20px padding from right edge
+        }
+
+        // Adjust vertical position
+        if (top + videoRect.height > viewportHeight) {
+            top = viewportHeight - videoRect.height - 20;
+        }
+        if (top < 20) {
+            top = 20; 
+        }
+
+        return { left, top };
+    };
+
     return (
-        <motion.div 
+        <motion.div
             className="container mx-auto py-28 text-primary"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <motion.h2 
-                className="text-4xl font-bold mb-28 text-center"
+            <motion.h2
+                className="text-4xl font-bold mb-16 text-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
             >
                 Recommended Checkpoints
             </motion.h2>
+            <motion.hr className="border-muted w-24 mx-auto mb-20" />
+
             <div className="flex flex-col mx-8 md:flex-row items-start justify-between gap-8 relative">
                 <ul ref={listRef} className="space-y-4 w-full md:w-1/4">
                     {steps.map((step, index) => (
@@ -58,7 +101,7 @@ const HoverVideoGuide = ({ steps }) => {
                             transition={{ duration: 0.5, delay: 0.1 * index }}
                         >
                             <motion.div
-                                className="p-4 rounded-xl transition-all duration-100 pt-4 cursor-default"
+                                className="p-8 rounded-xl transition-all duration-100 mt-4 cursor-default"
                                 whileHover={{
                                     backgroundColor: 'rgba(255, 255, 255, 0.1)',
                                     scale: 1.05,
@@ -67,30 +110,24 @@ const HoverVideoGuide = ({ steps }) => {
                                 onMouseEnter={() => handleMouseEnter(step)}
                                 onMouseLeave={() => setActiveStep(null)}
                             >
-                                <h3 className="text-xl font-semibold font-mono text-center">{index + 1}. {step.title}</h3>
-                                <p className="text-sm text-foreground text-center">{step.description}</p>
-                                {step.date && <p className="text-xs text-foreground text-center pt-4">by {step.date}</p>}
+                                <h3 className="text-xl font-semibold font-mono text-left">{index + 1}. {step.title}</h3>
+                                <p className="text-sm text-foreground text-left">{step.description}</p>
+                                {step.date && <p className="text-xs text-foreground text-left pt-4">by {step.date}</p>}
                             </motion.div>
-                            <motion.div
-                                className="h-0.5 bg-muted rounded-full mt-4"
-                                initial={{ scaleX: 0 }}
-                                animate={{ scaleX: activeStep === step ? 1 : 0 }}
-                                transition={{ duration: 0.3 }}
-                            />
                         </motion.li>
                     ))}
                 </ul>
                 <AnimatePresence>
-                    {activeStep && (
+                    {activeStep && !isMobile && (
                         <motion.div
-                            className="absolute md:w-full rounded-2xl overflow-hidden shadow-lg shadow-slate-800"
+                            ref={videoRef}
+                            className="absolute w-full rounded-2xl overflow-hidden shadow-lg shadow-slate-800 hidden md:block"
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.8 }}
                             transition={{ duration: 0.3 }}
                             style={{
-                                left: initialPosition.x + dampenedMovement.x + 300,
-                                top: initialPosition.y + dampenedMovement.y - 100,
+                                ...calculateVideoPosition(),
                                 transform: `translateY(-50%)`,
                                 maxWidth: '30vw',
                                 maxHeight: '70vh',

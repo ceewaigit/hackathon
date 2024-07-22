@@ -8,7 +8,7 @@ import Prizes from '../components/Prizes.js';
 import Sponsors from '../components/Sponsors.js';
 import FAQ from '../components/FAQ.js';
 import Judges from '../components/Judges.js';
-import Menu from '../components/Menu.js';
+import Menu from '../components/MenuBar.js';
 import HackathonTimeline from '../components/HackathonTimeline.js';
 import Participants from '../components/Participants.js';
 import ProjectShowcasePage from '../components/ProjectShowcasePage.js';

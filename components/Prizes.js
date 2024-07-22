@@ -4,7 +4,7 @@ import React from 'react';
 
 const Prizes = () => {
   return (
-    <section id="prizes" className="container mx-auto max-w-screen-xl pt-4 my-28">
+    <section id="prizes" className="container mx-auto max-w-screen-xl my-28">
       <h2 className="font-heading font-bold text-primary mt-6 mb-3 text-center text-3xl md:text-4xl">Prizes.</h2>
       <div className="mt-6 flex flex-wrap justify-center gap-4">
         <PrizeCard place="1st" amount="RTP $1649" name="RTX 4080 Super" image="https://asset.msi.com/resize/image/global/product/product_1704703437cd0bb1ce5104acf13cdad77245989172.png62405b38c58fe0f07fcef2367d8a9ba1/400.png" isFirst={true} />

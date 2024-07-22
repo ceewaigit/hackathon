@@ -4,7 +4,7 @@ import React from 'react';
 const Header = () => {
     return (
         <header className="text-foreground">
-            <section className="px-4 sm:px-6 mx-auto max-w-7xl border-muted border-t-2" style={{ background: 'radial-gradient(30.03% 74.25% at 50% 0%, rgb(115, 115, 115) 0%, hsl(222.2 84% 4.9%) 100%);' }}>
+            <section className="px-4 sm:px-6 mx-auto max-w-7xl border-muted border-t-2 mt-20" style={{ background: 'radial-gradient(30.03% 74.25% at 50% 0%, rgb(115, 115, 115) 0%, hsl(222.2 84% 4.9%) 100%);' }}>
                 <div>
                     <div className="flex flex-col relative">
                         <div className="flex flex-col items-center mt-20 sm:mt-24 px-4 sm:px-6">

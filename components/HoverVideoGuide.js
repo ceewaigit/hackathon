@@ -91,7 +91,7 @@ const HoverVideoGuide = ({ steps }) => {
             </motion.h2>
             <motion.hr className="border-muted w-24 mx-auto mb-20" />
 
-            <div className="flex flex-col mx-8 md:flex-row items-start justify-between gap-8 relative">
+            <div className="flex flex-col mx-4 md:flex-row items-start justify-between gap-8 relative">
                 <ul ref={listRef} className="space-y-4 w-full md:w-1/4">
                     {steps.map((step, index) => (
                         <motion.li
@@ -101,7 +101,7 @@ const HoverVideoGuide = ({ steps }) => {
                             transition={{ duration: 0.5, delay: 0.1 * index }}
                         >
                             <motion.div
-                                className="p-8 rounded-xl transition-all duration-100 mt-4 cursor-default"
+                                className="p-2 rounded-xl transition-all duration-100 mt-4 cursor-default"
                                 whileHover={{
                                     backgroundColor: 'rgba(255, 255, 255, 0.1)',
                                     scale: 1.05,

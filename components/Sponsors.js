@@ -8,8 +8,8 @@ const Sponsors = () => {
             tier: 'Platinum sponsor',
             companies: [
                 {
-                    name: 'Optiver',
-                    logo: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Citadel_Securities_logo.jpg',
+                    name: 'Sponsor 1',
+                    logo: 'https://shop.raceya.fit/wp-content/uploads/2020/11/logo-placeholder.jpg',
                     link: 'https://optiver.com/working-at-optiver/early-careers/',
                 },
             ],
@@ -18,23 +18,23 @@ const Sponsors = () => {
             tier: 'Gold sponsors',
             companies: [
                 {
-                    name: 'Mastercard',
-                    logo: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Citadel_Securities_logo.jpg',
+                    name: 'Sponsor 2',
+                    logo: 'https://shop.raceya.fit/wp-content/uploads/2020/11/logo-placeholder.jpg',
                     link: 'https://careers.mastercard.com/us/en/students',
                 },
                 {
-                    name: 'ST Engineering',
-                    logo: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Citadel_Securities_logo.jpg',
+                    name: 'Sponsor 3',
+                    logo: 'https://shop.raceya.fit/wp-content/uploads/2020/11/logo-placeholder.jpg',
                     link: 'https://www.stengg.com/en/careers/',
                 },
                 {
-                    name: 'Singtel',
-                    logo: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Citadel_Securities_logo.jpg',
+                    name: 'Sponsor 4',
+                    logo: 'https://shop.raceya.fit/wp-content/uploads/2020/11/logo-placeholder.jpg',
                     link: 'https://start.singtel.com/opportunities#students-graduates',
                 },
                 {
-                    name: 'TikTok',
-                    logo: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Citadel_Securities_logo.jpg',
+                    name: 'Sponsor 5',
+                    logo: 'https://shop.raceya.fit/wp-content/uploads/2020/11/logo-placeholder.jpg',
                     link: 'https://careers.tiktok.com/campus',
                 },
             ],
@@ -43,28 +43,28 @@ const Sponsors = () => {
             tier: 'Silver sponsors',
             companies: [
                 {
-                    name: 'Citadel',
-                    logo: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Citadel_Securities_logo.jpg',
+                    name: 'Sponsor 6',
+                    logo: 'https://shop.raceya.fit/wp-content/uploads/2020/11/logo-placeholder.jpg',
                     link: 'https://www.citadel.com/careers/open-opportunities/',
                 },
                 {
-                    name: 'Govtech',
-                    logo: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Citadel_Securities_logo.jpg',
+                    name: 'Sponsor 7',
+                    logo: 'https://shop.raceya.fit/wp-content/uploads/2020/11/logo-placeholder.jpg',
                     link: 'https://www.tech.gov.sg/careers/students-and-graduates/',
                 },
                 {
-                    name: 'DSO',
-                    logo: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Citadel_Securities_logo.jpg',
+                    name: 'Sponsor 8',
+                    logo: 'https://shop.raceya.fit/wp-content/uploads/2020/11/logo-placeholder.jpg',
                     link: 'https://careers.dso.org.sg/career-openings/index.html',
                 },
                 {
-                    name: 'Jane Street',
-                    logo: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Citadel_Securities_logo.jpg',
+                    name: 'Sponsor 9',
+                    logo: 'https://shop.raceya.fit/wp-content/uploads/2020/11/logo-placeholder.jpg',
                     link: 'https://www.janestreet.com/join-jane-street/overview/',
                 },
                 {
-                    name: 'foodpanda',
-                    logo: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Citadel_Securities_logo.jpg',
+                    name: 'Sponsor 10',
+                    logo: 'https://shop.raceya.fit/wp-content/uploads/2020/11/logo-placeholder.jpg',
                     link: 'https://careers.foodpanda.com',
                 },
             ],
@@ -73,13 +73,13 @@ const Sponsors = () => {
             tier: 'Bronze sponsors',
             companies: [
                 {
-                    name: 'Stripe',
-                    logo: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Citadel_Securities_logo.jpg',
+                    name: 'Sponsor 11',
+                    logo: 'https://shop.raceya.fit/wp-content/uploads/2020/11/logo-placeholder.jpg',
                     link: 'https://stripe.com/en-sg/jobs/university',
                 },
                 {
-                    name: 'Palantir',
-                    logo: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Citadel_Securities_logo.jpg',
+                    name: 'Sponsor 12',
+                    logo: 'https://shop.raceya.fit/wp-content/uploads/2020/11/logo-placeholder.jpg',
                     link: 'https://www.palantir.com/careers/students-and-early-talent/',
                 },
             ],
@@ -161,11 +161,11 @@ const Sponsors = () => {
                                             <img
                                                 src={company.logo}
                                                 alt={company.name}
-                                                className="rounded-xl object-contain max-w-full max-h-full"
+                                                className="rounded-full object-contain max-w-1/2 max-h-1/2"
                                             />
                                         </div>
-                                        <div className="company-name rounded-lg absolute inset-x-0 bottom-0 bg-accent bg-opacity-90 py-2 border-background border">
-                                            <p className="text-accent-foreground inline text-sm font-semibold text-center px-2 truncate ">
+                                        <div className="company-name rounded-lg absolute inset-x-0 bottom-0 bg-primary bg-opacity-90 py-2 border-background border">
+                                            <p className="text-primary-foreground inline text-sm font-semibold text-center px-2 truncate ">
                                                 {company.name}
                                             </p>
                                         </div>

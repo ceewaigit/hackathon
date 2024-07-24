@@ -9,7 +9,7 @@ const Prizes = () => {
       <div className="mt-6 flex flex-wrap justify-center gap-4">
         <PrizeCard place="1st" amount="RTP $1649" name="RTX 4080 Super" image="https://asset.msi.com/resize/image/global/product/product_1704703437cd0bb1ce5104acf13cdad77245989172.png62405b38c58fe0f07fcef2367d8a9ba1/400.png" isFirst={true} />
         <PrizeCard place="2nd" amount="RTP $899" name="iPad Air M2 (128GB)" image="https://www.imagineonline.store/cdn/shop/files/iPadAirM2Chip_hero_small_2x_iPadAirM2Chip.png?1714511032849" />
-        <PrizeCard place="3rd" amount="RTP $549" name="PS5 Digital (Non-Slim)" image="https://gmedia.playstation.com/is/image/SIEPDC/ps5-product-thumbnail-01-en-14sep21?$facebook$" />
+        <PrizeCard place="3rd" amount="RTP $549" name="PS5 Digital (Non-Slim)" image="https://cdn.shopify.com/s/files/1/0557/9351/6695/files/ps5vert.png?v=1710293526&width=1454&height=1056" />
       </div>
       <div className="mt-6 flex flex-wrap justify-center gap-4 xs:gap-8 md:gap-10">
         <BlurryPrizeCard place="???" amount="ohhh you tot" image="https://cdn-icons-png.flaticon.com/512/3176/3176367.png" />
@@ -38,7 +38,7 @@ const PrizeCard = ({ place, amount, name, image, isFirst = false }) => (
     </div>
     <div className="w-full flex flex-col gap-4 md:gap-6 items-stretch">
       <div className="flex flex-row justify-center">
-        <img src={image} alt={place} className="w-1/3 md:w-1/2 min-w-[9vw]" />
+        <img src={image} alt={place} className="w-1/3 md:w-1/2 min-w-[5vw] max-w-[7vw]" />
       </div>
       <h2 className="font-mono font-bold text-secondary text-center text-xl md:text-2xl">{name}</h2>
       <h2 className="font-bold text-secondary text-center text-md md:text-lg text-smu">{amount}</h2>

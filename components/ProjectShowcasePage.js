@@ -4,7 +4,7 @@ const projects = [
     {
         title : "Find a team!",
         date: "01/01/2025",
-        description: "Drag all your friends, or do it alone!",
+        description: "Try to find people from different backgrounds! This way you can learn from each other and leverage your strengths while compensating for your weaknesses.",
         videoUrl: "/videos/jjk.mp4"
     },
     {
@@ -15,17 +15,17 @@ const projects = [
     },
     {
         title: "Build your project!",
-        description: "Start cooking",
+        description: "Start cooking.",
         videoUrl: "/videos/sweatycode.mp4"
     },
     {
-        title: "Record a video of your project!",
-        description: "Show us visually what you've done!",
+        title: "(Optional) Record a video of your project!",
+        description: "This could be a demo, an online presentation, or a trailer!",
         videoUrl: "/videos/shia.mp4"
     },
     {
         title: "Write up the project description!",
-        description: "Convey your vision in a document!",
+        description: "Tell us what you did and let us know how you did it and convince us why it's cool!",
         videoUrl: "/videos/firewriting.mp4"
     },
     {
@@ -35,9 +35,9 @@ const projects = [
         videoUrl: "/videos/hotdog.mp4"
     },
     {
-        title: "Present your project!",
+        title: "Demo day! Present your project!",
         date: "04/01/2025",
-        description: "Top 10 teams will pitch and their your vision!",
+        description: "Usually, people think that demo day is solely just a technical presentation. But it is also about the story you tell and the impact you made.",
         videoUrl: "/videos/buffsuit.mp4"
     },
     {

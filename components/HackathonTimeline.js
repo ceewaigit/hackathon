@@ -70,7 +70,7 @@ const HackathonTimeline = () => {
   };
 
   return (
-    <section id="timeline" className="container my-28 pt-8 md:pt-12 mx-auto px-2 md:px-4 max-w-4xl relative">
+    <section id="timeline" className="container my-28 py-2 pt-8 md:pt-12 mx-auto px-4 md:px-4 max-w-4xl relative">
       <div className="absolute inset-0" style={gradientStyle}></div>
       <h2 className="text-2xl md:text-4xl font-bold font-heading text-primary mt-4 md:mt-6 mb-8 md:mb-12 text-center relative z-10">Timeline of Events</h2>
       <div className="relative" ref={timelineRef}>

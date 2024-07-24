@@ -1,6 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import StartupMottoTyper from './StartupMottoTyper';
+import { ChevronRight } from 'lucide-react';
+
+const tips = [
+    "Avoid finding a Solution in search of a Problem. Instead, find a Problem in search of a Solution.",
+    "Understand who your customers are and what they need. Are you B2B or B2C or B2B2C or B2G? Then, build a product that solves their problems.",
+    "KISS - Keep It Simple, Stupid. Some things are better left uncomplicated.",
+    "Fail fast, fail often. Learn from your mistakes and iterate quickly.",
+    "Think about whether you are building a feature or a product. A feature is a part of a product, while a product is a solution to a problem.",
+    "Ensure that your infrastructure is actually doable and scalable. You don't want to be stuck with a product that can't grow with your business.",
+    "Lastly, have heart and passion. No one wants to work with someone who doesn't care about what they're doing."
+];
 
 const HoverVideoGuide = ({ steps }) => {
     const [activeStep, setActiveStep] = useState(null);
@@ -91,7 +102,7 @@ const HoverVideoGuide = ({ steps }) => {
                 Guide
             </motion.h2>
             <motion.hr className="border-muted w-24 mx-auto mb-20" />
-            <div className="relative flex flex-col md:flex-row gap-24 justify-center">
+            <div className="relative flex flex-col md:flex-row gap-28 justify-center">
                 <div className="w-full md:w-1/3 relative">
                     <ul ref={listRef} className="space-y-4">
                         {steps.map((step, index) => (
@@ -102,7 +113,7 @@ const HoverVideoGuide = ({ steps }) => {
                                 transition={{ duration: 0.5, delay: 0.1 * index }}
                             >
                                 <motion.div
-                                    className="p-4 rounded-xl transition-all duration-100 mt-4 cursor-default"
+                                    className="px-4 py-2 rounded-xl transition-all duration-100 mt-2 cursor-default"
                                     whileHover={{
                                         backgroundColor: 'rgba(255, 255, 255, 0.1)',
                                         scale: 1.05,
@@ -119,13 +130,19 @@ const HoverVideoGuide = ({ steps }) => {
                         ))}
                     </ul>
                 </div>
-                <div className='w-full md:w-1/2 flex flex-col justify-center'>
-                    <h2 className="text-4xl font-bold mb-2 text-center">
-                        Fostering <span className='text-smu'>innovation</span>
+                <div className='w-full md:w-1/2 flex flex-col justify-center text-white rounded-lg shadow-xl'>
+                    <h2 className="text-4xl font-bold text-center mb-4 font-mono">
+                        In search of <span className='text-red-400'>innovation</span>
                     </h2>
-                    <p className="text-sm text-center font-mono">
-                        Avoid finding a Solution in search of a Problem. <br /> Instead, find a Problem in search of a Solution.
-                    </p>
+                    <hr className="border-primary w-24 mx-auto mb-8" />
+                    <div className="space-y-6 text-left">
+                        {tips.map((tip, index) => (
+                            <div key={index} className="flex items-start mt-2">
+                                <ChevronRight className="flex-shrink-0 w-5 h-5 mt-1 mr-2 text-yellow-400" />
+                                <p className="text-md font-light">{tip}</p>
+                            </div>
+                        ))}
+                    </div>
                     <div className="mt-8">
                         <StartupMottoTyper />
                     </div>

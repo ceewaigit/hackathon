@@ -11,7 +11,7 @@ const Prizes = () => {
         <PrizeCard place="2nd" amount="RTP $899" name="iPad Air M2 (128GB)" image="https://www.imagineonline.store/cdn/shop/files/iPadAirM2Chip_hero_small_2x_iPadAirM2Chip.png?1714511032849" />
         <PrizeCard place="3rd" amount="RTP $549" name="PS5 Digital (Non-Slim)" image="https://gmedia.playstation.com/is/image/SIEPDC/ps5-product-thumbnail-01-en-14sep21?$facebook$" />
       </div>
-      <div className="mt-6 flex flex-wrap justify-center gap-4">
+      <div className="mt-6 flex flex-wrap justify-center gap-4 xs:gap-8 md:gap-10">
         <BlurryPrizeCard place="???" amount="ohhh you tot" image="https://cdn-icons-png.flaticon.com/512/3176/3176367.png" />
         <BlurryPrizeCard place="???" amount="ohhh you tot" image="https://cdn-icons-png.flaticon.com/512/3800/3800918.png" />
         <BlurryPrizeCard place="???" amount="ohhh you tot" image="https://cdn-icons-png.flaticon.com/512/3176/3176367.png" />
@@ -47,13 +47,13 @@ const PrizeCard = ({ place, amount, name, image, isFirst = false }) => (
 );
 
 const BlurryPrizeCard = ({ place, amount, image, isFirst = false }) => (
-  <div className="bg-primary rounded-2xl shadow-inner shadow-black flex flex-col items-center mt-4 px-4 md:px-8 pb-6 md:pb-10 gap-4 md:gap-10 w-full sm:w-1/4 md:w-1/5 lg:w-1/6 max-w-xs">
+  <div className="bg-primary rounded-2xl shadow-inner shadow-black flex flex-col items-center mt-4 px-4 md:px-8 pb-6 md:pb-10 gap-4 md:gap-10 w-1/3 sm:w-1/4 md:w-1/5 lg:w-1/6 max-w-xs">
     <div className={`-mt-4 px-3 py-1 bg-primary rounded-full flex flex-col justify-center items-center w-max font-bold ${isFirst ? 'text-accent border-accent border-2' : 'text-secondary'}`}>
       <p>{place}</p>
     </div>
     <div className="w-full flex flex-col gap-4 md:gap-10 items-stretch blur-2xl">
       <div className="flex flex-row justify-center">
-        <img src={image} alt={place} className="w-1/3 md:w-1/2" />
+        <img src={image} alt={place} className="w-1/4 md:w-1/2" />
       </div>
       <h2 className="font-mono font-bold text-secondary text-center text-md md:text-lg">{amount}</h2>
     </div>

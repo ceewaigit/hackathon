@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import StartupMottoTyper from './StartupMottoTyper';
 
 const HoverVideoGuide = ({ steps }) => {
     const [activeStep, setActiveStep] = useState(null);
@@ -68,7 +69,7 @@ const HoverVideoGuide = ({ steps }) => {
             top = viewportHeight - videoRect.height - 20;
         }
         if (top < 20) {
-            top = 20; 
+            top = 20;
         }
 
         return { left, top };
@@ -76,47 +77,59 @@ const HoverVideoGuide = ({ steps }) => {
 
     return (
         <motion.div
-            className="container mx-auto py-28 text-primary"
+            className="container mx-auto py-28 text-primary text-center"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
         >
             <motion.h2
-                className="text-4xl font-bold mb-16 text-center"
+                className="text-4xl font-bold mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
             >
-                Recommended Checkpoints
+                Guide
             </motion.h2>
             <motion.hr className="border-muted w-24 mx-auto mb-20" />
-
-            <div className="flex flex-col mx-4 md:flex-row items-start justify-between gap-8 relative">
-                <ul ref={listRef} className="space-y-4 w-full md:w-1/4">
-                    {steps.map((step, index) => (
-                        <motion.li
-                            key={index}
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.5, delay: 0.1 * index }}
-                        >
-                            <motion.div
-                                className="p-2 rounded-xl transition-all duration-100 mt-4 cursor-default"
-                                whileHover={{
-                                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                                    scale: 1.05,
-                                    boxShadow: 'hsl(var(--muted)) 0px 0px 0px 1px, hsl(0deg 0% 100% / 20%) 0px 4px 6px -1px'
-                                }}
-                                onMouseEnter={() => handleMouseEnter(step)}
-                                onMouseLeave={() => setActiveStep(null)}
+            <div className="relative flex flex-col md:flex-row gap-24 justify-center">
+                <div className="w-full md:w-1/3 relative">
+                    <ul ref={listRef} className="space-y-4">
+                        {steps.map((step, index) => (
+                            <motion.li
+                                key={index}
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.5, delay: 0.1 * index }}
                             >
-                                <h3 className="text-xl font-semibold font-mono text-left">{index + 1}. {step.title}</h3>
-                                <p className="text-sm text-foreground text-left">{step.description}</p>
-                                {step.date && <p className="text-xs text-foreground text-left pt-4">by {step.date}</p>}
-                            </motion.div>
-                        </motion.li>
-                    ))}
-                </ul>
+                                <motion.div
+                                    className="p-4 rounded-xl transition-all duration-100 mt-4 cursor-default"
+                                    whileHover={{
+                                        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                                        scale: 1.05,
+                                        boxShadow: 'hsl(var(--muted)) 0px 0px 0px 1px, hsl(0deg 0% 100% / 20%) 0px 4px 6px -1px'
+                                    }}
+                                    onMouseEnter={() => handleMouseEnter(step)}
+                                    onMouseLeave={() => setActiveStep(null)}
+                                >
+                                    <h3 className="text-xl font-semibold font-mono text-left">{index + 1}. {step.title}</h3>
+                                    <p className="text-sm text-foreground text-left">{step.description}</p>
+                                    {step.date && <p className="text-xs text-foreground text-left pt-4">by {step.date}</p>}
+                                </motion.div>
+                            </motion.li>
+                        ))}
+                    </ul>
+                </div>
+                <div className='w-full md:w-1/2 flex flex-col justify-center'>
+                    <h2 className="text-4xl font-bold mb-2 text-center">
+                        Fostering <span className='text-smu'>innovation</span>
+                    </h2>
+                    <p className="text-sm text-center font-mono">
+                        Avoid finding a Solution in search of a Problem. <br /> Instead, find a Problem in search of a Solution.
+                    </p>
+                    <div className="mt-8">
+                        <StartupMottoTyper />
+                    </div>
+                </div>
                 <AnimatePresence>
                     {activeStep && !isMobile && (
                         <motion.div

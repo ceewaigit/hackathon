@@ -91,7 +91,7 @@ const FAQ = () => {
                                 <strong>For Hardware Projects:</strong> Discuss materials, design process, and real-world applications. 🔩
                             </p>
                             <p className="text-primary text-sm sm:text-base mt-2">
-                                <strong>For Social Impact Projects:</strong> Emphasize the problem's significance and your solution's potential impact. ❤️
+                                <strong>For Social Impact Projects:</strong> Emphasize the problem&apos;s significance and your solution&apos;s potential impact. ❤️
                             </p>
                             <p className="text-primary text-sm sm:text-base mt-4">
                                 Make sure to include your tech stack and architecture, any relevant metrics, any discoveries you made, a demo of your project, and any future plans you have for the project.

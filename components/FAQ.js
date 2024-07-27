@@ -74,6 +74,30 @@ const FAQ = () => {
                             Yes! We have exciting prizes for the top projects. Prize details will be announced at the opening ceremony of the hackathon.
                         </AccordionContent>
                     </AccordionItem>
+                    <AccordionItem value="item-13">
+                        <AccordionTrigger>What do I include in my pitch deck?</AccordionTrigger>
+                        <AccordionContent>
+                            <h2 className='text-lg font-bold text-center text-red-300'>We are not expecting any particular format for your pitch deck. However, here are some general tips:</h2>
+                            <p className="text-primary text-sm sm:text-base mt-4">
+                                <strong>For Consumer Products:</strong> Focus on user experience, market fit, and growth potential. 📱
+                            </p>
+                            <p className="text-primary text-sm sm:text-base mt-2">
+                                <strong>For Machine Learning Projects:</strong> Emphasize your dataset, model architecture, and performance metrics. 🤖
+                            </p>
+                            <p className="text-primary text-sm sm:text-base mt-2">
+                                <strong>For Data Visualizations:</strong> Highlight data sources, cleaning process, and key insights derived. 📈
+                            </p>
+                            <p className="text-primary text-sm sm:text-base mt-2">
+                                <strong>For Hardware Projects:</strong> Discuss materials, design process, and real-world applications. 🔩
+                            </p>
+                            <p className="text-primary text-sm sm:text-base mt-2">
+                                <strong>For Social Impact Projects:</strong> Emphasize the problem's significance and your solution's potential impact. ❤️
+                            </p>
+                            <p className="text-primary text-sm sm:text-base mt-4">
+                                Make sure to include your tech stack and architecture, any relevant metrics, any discoveries you made, a demo of your project, and any future plans you have for the project.
+                            </p>
+                        </AccordionContent>
+                    </AccordionItem>
                 </Accordion>
             </div>
         </section>

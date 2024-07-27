@@ -33,9 +33,19 @@ const BentoGrid = () => {
                 <div className="bg-secondary flex shadow-inner p-4 md:pt-0 rounded-2xl col-span-1 sm:col-span-1 lg:col-span-2 border-accent transition duration-300 ease-in-out hover:border-2 hover:scale-95 shadow shadow-black">
                     <img src="./calandar.png" alt="Placeholder" className="hidden md:block h-[10vh] max-w-full mx-auto" />
                     <div className="flex flex-col p-0 md:p-8">
-                        <h2 className="text-lg sm:text-xl font-semibold mb-2 font-mono">4. Schedule and Theme</h2>
-                        <p className="text-primary text-sm sm:text-base mb-2"><span className='text-smu'>SMU</span> HackBIA kicks off on January 22 2025. The theme this year is &quot;Tech for Social Good,&quot; challenging participants to develop solutions that address pressing social issues. 🤝🌟</p>
-                        <p className="text-primary text-sm sm:text-base">The event includes workshops, mentoring sessions, and fun activities throughout the 3 weeks of hacking! Do not miss the opening ceremony and team formation activities! 🎉</p>
+                        <h2 className="text-lg sm:text-xl font-semibold mb-2 font-mono">4. Theme</h2>
+                        <p className="text-primary text-sm sm:text-base mb-2"><span className='text-smu'>SMU</span> HackBIA 2025 will have 5 different problem statements. Some of these themes are from the industry partners, while others are from the organizing committee. 📝🔍</p>
+
+                        <p className="text-primary text-sm sm:text-base mb-2">Here are the problem statements:</p>
+                        <ul className="text-primary text-sm sm:text-base list-disc">
+                            <li><span className='font-bold font-mono'>Sponsor 1:</span> How can we use data analytics to improve customer experience?</li>
+                            <li><span className='font-bold font-mono'>Sponsor 2:</span> How can we use AI to predict customer churn? </li>
+                            <li>How do we improve the smart nation initiative in Singapore? This could range from improving public services to enhancing the quality of life for residents.</li>
+                            <li>What does the future of education look like? This could be in the context of online learning, personalized learning, or other niches.</li>
+                            <li>What does the future of work look like? This could be in the context of remote work, automation, or other trends.</li>
+                        </ul>
+                        <br />
+                        <p className="text-primary text-sm sm:text-base mb-2">You can choose any theme that interests you or aligns with your skills and passion or <br /> if you have any particular industry partner that you want to impress, you can choose their problem statement to work on. 🤝🚀</p>
                     </div>
                 </div>
                 <div className="bg-secondary shadow-inner p-4 sm:p-5 rounded-2xl col-span-1 sm:col-span-1 lg:col-span-1 border-accent transition duration-300 ease-in-out hover:border-2 hover:scale-95 shadow shadow-black">

@@ -5,13 +5,13 @@ const projects = [
     title: "Find a team!",
     description:
       "Try to find people from different backgrounds! This way you can learn from each other and leverage your strengths while compensating for your weaknesses.",
-    videoUrl: "/videos/jjk.mp4",
+    // videoUrl: "/videos/jjk.mp4",
   },
   {
     title: "Sign up!",
     date: "01/13/2025",
     description: "Tell us you're in. Make sure everyone is a student!",
-    videoUrl: "/videos/buffswim.mp4",
+    // videoUrl: "/videos/buffswim.mp4",
   },
   {
     title: "Build your project!",
@@ -40,13 +40,13 @@ const projects = [
     date: "07/02/2025",
     description:
       "Usually, people think that demo day is solely just a technical presentation. But it is also about the story you tell and the impact you made.",
-    videoUrl: "/videos/buffsuit.mp4",
+    // videoUrl: "/videos/buffsuit.mp4",
   },
   {
     title: "win.",
     description:
       "If anything, it is about the friends we made along the way. But also the prizes.",
-    videoUrl: "/videos/idwin.mp4",
+    // videoUrl: "/videos/idwin.mp4",
   },
 ];
 

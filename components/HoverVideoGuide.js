@@ -148,7 +148,7 @@ const HoverVideoGuide = ({ steps }) => {
                     </div>
                 </div>
                 <AnimatePresence>
-                    {activeStep && !isMobile && (
+                    {activeStep && activeStep.videoUrl && !isMobile && (
                         <motion.div
                             ref={videoRef}
                             className="absolute w-full rounded-2xl overflow-hidden shadow-lg shadow-slate-800 hidden md:block"

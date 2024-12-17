@@ -1,16 +1,19 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 
 const Header = () => {
   return (
     <header className="text-foreground">
       <section
-        className="px-4 sm:px-6 mx-auto max-w-7xl border-muted border-t-2 mt-20"
+        className="px-4 sm:px-6 mx-auto max-w-7xl mt-20"
         style={{
-          background:
-            "radial-gradient(30.03% 74.25% at 50% 0%, rgb(115, 115, 115) 0%, hsl(222.2 84% 4.9%) 100%);",
+          background: `radial-gradient(30.03% 55% at 50% 0%, rgb(115, 115, 115) 0%, hsl(var(--background)) 100%)`,
         }}
       >
+        {/* Responsive narrower top border */}
+        <div className="border-muted border-t-2 mx-auto w-[90%] sm:w-[80%] md:w-[70%]" />
+
         <div>
           <div className="flex flex-col relative">
             <div className="flex flex-col items-center mt-20 sm:mt-24 px-4 sm:px-6">
@@ -32,32 +35,34 @@ const Header = () => {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
                 <a
-                  href="https://ceewai.com"
+                  href="https://youtu.be/xvFZjo5PgG0?si=ZgKdchBXYiaonQUf"
                   rel="noreferrer noopener"
                   target="_blank"
                   className="w-full sm:w-auto"
                 >
-                  <button className="w-full sm:w-auto focus:shadow-outline font-medium px-6 py-3 mt-2 md:mt-8 justify-center items-center shadow-inner shadow-black rounded-2xl duration-300 transition focus:outline-none select-none text-lg bg-accent hover:bg-accent/90 hover:border-2 text-accent-foreground border-card hover:scale-105 hover:bg-muted">
+                  <button className="w-full sm:w-auto focus:shadow-outline font-medium px-6 py-3 mt-2 md:mt-8 justify-center items-center shadow-inner shadow-black rounded-2xl duration-300 transition focus:outline-none select-none text-lg bg-accent hover:bg-accent/90 hover:border-2 text-accent-foreground border-card hover:scale-105">
                     Sign up now!
                   </button>
                 </a>
-                {/* <a
-                  href="https://ceewai.com"
-                  rel="noreferrer noopener"
-                  target="_blank"
-                  className="w-full sm:w-auto"
-                >
-                  <button className="w-full sm:w-auto focus:shadow-outline font-medium px-6 py-3 mt-2  md:mt-8 justify-center items-center shadow-inner shadow-black rounded-2xl duration-300 transition focus:outline-none select-none text-lg bg-smu hover:bg-accent/90 hover:border-2 text-accent-foreground border-card hover:scale-105 hover:bg-muted">
-                    Submit Project!
-                  </button>
-                </a> */}
               </div>
             </div>
-            <div className="hidden md:block -mt-8 -mb-8 -mx-10 pointer-events-none mx-auto">
-              <img src="./scratch.png" alt="photos" className="w-full" />
+            <div className="hidden md:block -mt-8 -mb-8 pointer-events-none mx-auto">
+              <Image
+                src="/scratch.png"
+                alt="photos"
+                width={1200}
+                height={500}
+                className="w-full"
+              />
             </div>
             <div className="md:hidden pointer-events-none mx-auto mt-8">
-              <img src="/scratch.png" alt="photos" className="w-full" />
+              <Image
+                src="/scratch.png"
+                alt="photos"
+                width={1200}
+                height={500}
+                className="w-full"
+              />
             </div>
           </div>
         </div>

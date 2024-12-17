@@ -141,7 +141,7 @@ const HackathonTimeline = () => {
   }, [nearestUpcomingEventIndex]);
 
   const gradientStyle = {
-    background: `radial-gradient(circle at ${gradientPosition.x}% ${gradientPosition.y}%, rgba(var(--accent-rgb), 0.15) 0%, rgba(var(--accent-rgb), 0) 50%)`,
+    background: `radial-gradient(circle at ${gradientPosition.x}% ${gradientPosition.y}%, rgba(var(--accent-rgb), 0.15) 0%, rgba(var(--accent-rgb), 0) 30%)`,
   };
 
   return (

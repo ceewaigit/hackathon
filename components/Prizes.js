@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { Gift, Trophy, Medal, DollarSign } from "lucide-react";
 
 const Prizes = () => {
   return (
@@ -8,93 +9,55 @@ const Prizes = () => {
       <h2 className="font-heading font-bold text-primary mt-6 mb-3 text-center text-3xl md:text-4xl">
         Prizes.
       </h2>
-      <div className="mt-6 flex flex-wrap justify-center gap-4">
-        <PrizeCard
+      <div className="mt-6 flex flex-wrap justify-center gap-6">
+        <BlurryPrizeCard
           place="1st"
-          amount="RTP $1649"
-          name="RTX 4080 Super"
-          image="https://asset.msi.com/resize/image/global/product/product_1704703437cd0bb1ce5104acf13cdad77245989172.png62405b38c58fe0f07fcef2367d8a9ba1/400.png"
+          amount="$?,???"
+          icon={<Trophy className="w-8 h-8 md:w-12 md:h-12" />}
           isFirst={true}
         />
-        <PrizeCard
+        <BlurryPrizeCard
           place="2nd"
-          amount="RTP $899"
-          name="iPad Air M2 (128GB)"
-          image="https://www.imagineonline.store/cdn/shop/files/iPadAirM2Chip_hero_small_2x_iPadAirM2Chip.png?1714511032849"
+          amount="$?,???"
+          icon={<Medal className="w-8 h-8 md:w-12 md:h-12" />}
         />
-        <PrizeCard
+        <BlurryPrizeCard
           place="3rd"
-          amount="RTP $549"
-          name="PS5 Digital (Non-Slim)"
-          image="https://cdn.shopify.com/s/files/1/0557/9351/6695/files/ps5vert.png?v=1710293526&width=1454&height=1056"
+          amount="$????"
+          icon={<Gift className="w-8 h-8 md:w-12 md:h-12" />}
         />
       </div>
-      {/* <div className="mt-6 flex flex-wrap justify-center gap-4 xs:gap-8 md:gap-10">
-        <BlurryPrizeCard place="???" amount="ohhh you tot" image="https://cdn-icons-png.flaticon.com/512/3176/3176367.png" />
-        <BlurryPrizeCard place="???" amount="ohhh you tot" image="https://cdn-icons-png.flaticon.com/512/3800/3800918.png" />
-        <BlurryPrizeCard place="???" amount="ohhh you tot" image="https://cdn-icons-png.flaticon.com/512/3176/3176367.png" />
-        <BlurryPrizeCard place="???" amount="ohhh you tot" image="https://cdn-icons-png.flaticon.com/512/3800/3800918.png" />
-      </div> */}
-      {/* <div className="text-center gradient-animation text-primary bg-muted w-full md:w-4/5 mx-auto p-8 rounded-2xl font-mono mt-12">
-        <p className="w-1/2 mx-auto text-xl">
-          Top 10 finalists: <br />{" "}
-          <span className="text-secondary font-bold">Apple Airpods 2</span>
-        </p>
-      </div> */}
       <div>
         <hr className="w-full m-10" />
         <p className="my-3 text-primary font-mono mt-0 z-10 text-center text-sm md:text-base">
-          Stand a chance to win <span className="text-accent">$XXX</span> worth
-          of prizes! <br /> 
+          Stand a chance to win <span className="text-accent">$3,000</span> worth
+          of prizes!
         </p>
       </div>
     </section>
   );
 };
 
-const PrizeCard = ({ place, amount, name, image, isFirst = false }) => (
-  <div className="bg-primary rounded-2xl shadow-inner shadow-black flex flex-col items-center mt-4 px-4 md:px-8 pb-6 md:pb-10 gap-4 md:gap-10 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 max-w-xs">
+const BlurryPrizeCard = ({ place, amount, icon, isFirst = false }) => (
+  <div className="bg-white rounded-2xl shadow-lg flex flex-col items-center mt-4 px-4 md:px-6 py-8 w-[240px] h-[280px] md:w-[280px] md:h-[320px] relative">
     <div
-      className={`-mt-4 px-3 py-1 bg-primary rounded-full flex flex-col justify-center items-center w-max font-bold ${
+      className={`absolute -top-3 px-4 py-1 bg-white rounded-full flex justify-center items-center font-bold ${
         isFirst ? "text-accent border-accent border-2" : "text-secondary"
       }`}
     >
       <p>{place}</p>
     </div>
-    <div className="w-full flex flex-col gap-4 md:gap-6 items-stretch">
-      <div className="flex flex-row justify-center">
-        <img
-          src={image}
-          alt={place}
-          className="w-1/3 md:w-1/2 min-w-[5vw] max-w-[7vw]"
-        />
+    <div className="w-full h-full flex flex-col justify-center items-center gap-6 blur-[8px]">
+      <div className="text-secondary">
+        {icon}
       </div>
-      <h2 className="font-mono font-bold text-secondary text-center text-xl md:text-2xl">
-        {name}
-      </h2>
-      <h2 className="font-bold text-secondary text-center text-md md:text-lg text-smu">
+      <h2 className="font-mono font-bold text-secondary text-xl md:text-2xl">
         {amount}
       </h2>
-    </div>
-  </div>
-);
-
-const BlurryPrizeCard = ({ place, amount, image, isFirst = false }) => (
-  <div className="bg-primary rounded-2xl shadow-inner shadow-black flex flex-col items-center mt-4 px-4 md:px-8 pb-6 md:pb-10 gap-4 md:gap-10 w-1/3 sm:w-1/4 md:w-1/5 lg:w-1/6 max-w-xs">
-    <div
-      className={`-mt-4 px-3 py-1 bg-primary rounded-full flex flex-col justify-center items-center w-max font-bold ${
-        isFirst ? "text-accent border-accent border-2" : "text-secondary"
-      }`}
-    >
-      <p>{place}</p>
-    </div>
-    <div className="w-full flex flex-col gap-4 md:gap-10 items-stretch blur-2xl">
-      <div className="flex flex-row justify-center">
-        <img src={image} alt={place} className="w-1/4 md:w-1/2" />
+      <div className="flex flex-col items-center text-secondary gap-2">
+        <DollarSign className="w-6 h-6" />
+        <p className="text-xs italic">why you looking 👀</p>
       </div>
-      <h2 className="font-mono font-bold text-secondary text-center text-md md:text-lg">
-        {amount}
-      </h2>
     </div>
   </div>
 );
